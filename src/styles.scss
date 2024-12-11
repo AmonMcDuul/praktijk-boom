@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+$primary-color: #0e2c3a;
+$secondary-color: #2c3e50;
+$accent-color: #e74c3c;
+$light-gray: #f4f4f4;
+$background-color: #f7f7f7;
+$text-color: #333;
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
