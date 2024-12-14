@@ -2,8 +2,10 @@
 
 .header-container {
     height: 100px;
-    background: #daecd4;
-    color: #000000;
+    // background: #daecd4;
+    background: #00656c;
+    color: #f3f3f3;
+    // color: #ff9a93;
     display: flex;
     align-items: center;
     padding-left: 60px;
@@ -21,7 +23,7 @@ img {
     gap: 40px;
 
     a {
-        color: #000000;
+        color: #f3f3f3;
         text-decoration: none;
         font-size: 1.2rem;
         font-weight: 500;
@@ -29,7 +31,7 @@ img {
         transition: color 0.3s ease;
 
         &:hover {
-            color: $accent-color;
+            color: #ff9a93;
         }
 
         &:after {
@@ -37,7 +39,7 @@ img {
             display: block;
             width: 0;
             height: 2px;
-            background: $accent-color;
+            background: #ff9a93;
             transition: width 0.3s ease;
             position: absolute;
             bottom: -6px;

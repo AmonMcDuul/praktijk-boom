@@ -1,8 +1,8 @@
 @import '../../../styles.scss';
 
 .footer-container {
-    background-color: #a5b3a3;
-    color: #000000;
+    background-color: #00656c;
+    color: #ffffff;
     // padding: 40px 0px;
     display: flex;
     flex-direction: column;
@@ -34,12 +34,12 @@
             margin-bottom: 10px;
   
             a {
-              color: #000000;
+              color: #ffffff;
               text-decoration: none;
               transition: color 0.3s ease-in-out;
   
               &:hover {
-                color: #2a6f78;
+                color: #ff9a93;
               }
             }
           }

@@ -6,17 +6,21 @@
 
 .hero {
     display: flex;
-    background: linear-gradient(to right, #f2f2f2 50%, rgba(0, 0, 0, 0)), 
+    background: linear-gradient(to right, #f2f2f2 20%, rgba(0, 0, 0, 0)), 
+                // url('https://i.ibb.co/d0LHvdR/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background.jpg') right center no-repeat;
                 url('https://images.pexels.com/photos/1673973/pexels-photo-1673973.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') right center no-repeat;
     background-size: cover; 
-    padding: 100px 60px;
+    padding: 0px 60px;
     color: rgb(0, 0, 0);
     margin-bottom: 60px;
     text-align: left;
+    min-height: 50vw;
     
     .hero-content {
-        max-width: 50%;
+        padding-top: 200px;
+        padding-bottom: 200px;
         padding-right: 20px;
+        max-width: 50%;
     }
     
     h1 {
@@ -40,6 +44,9 @@
 .values {
     padding: 60px 20px; // Padding rondom
     text-align: center;
+    background-color: #ebebeb;
+    background: linear-gradient(to right, #f2f2f2 50%, rgba(0, 0, 0, 0)), 
+                url('https://i.ibb.co/d0LHvdR/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background.jpg') right center no-repeat;
 
     h2 {
         font-size: 2.5rem;
