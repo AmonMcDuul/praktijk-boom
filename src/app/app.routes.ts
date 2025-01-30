@@ -3,6 +3,7 @@ import { AanbodComponent } from './pages/aanbod/aanbod.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
+import { AanmeldenComponent } from './pages/aanmelden/aanmelden.component';
 
 export const routes: Routes = [
     {
@@ -19,6 +20,11 @@ export const routes: Routes = [
         path: 'aanbod',
         component: AanbodComponent,
         title: 'Aanbod',
+      },
+      {
+        path: 'aanmelden',
+        component: AanmeldenComponent,
+        title: 'aanmelden',
       },
       {
         path: 'contact',

@@ -8,7 +8,7 @@
     .services-header {
       background: linear-gradient(to right, #f2f2f2 10%, rgba(0, 0, 0, 0)), 
                   url('https://i.ibb.co/d0LHvdR/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background.jpg') 
-                  center center no-repeat;
+                  top center no-repeat;
       background-size: cover;
       padding: 80px 60px;
       text-align: left;
@@ -17,12 +17,16 @@
         font-size: 3rem;
         color: rgb(0, 0, 0);
         margin-bottom: 20px;
+        padding-right: 20px;
+        max-width: 50%;
       }
   
       p {
         font-size: 1.2rem;
         color: #000000;
-        max-width: 600px;
+        padding-right: 20px;
+        max-width: 50%;
+        line-height: 1.6;
       }
     }
   
@@ -74,7 +78,7 @@
       
           i {
             font-size: 2.5rem;
-            color: $accent-color;
+            color: #7BA05B;
             margin-bottom: 15px;
           }
       
@@ -92,6 +96,9 @@
           &:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            i{
+              color: darken(#ff9a93, 10%);
+            }
           }
         }
       }
