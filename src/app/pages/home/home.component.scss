@@ -180,6 +180,16 @@
                 }
             }
         }
+
+    }
+
+    .small-container{
+        display: flex;
+        justify-content: center;
+        .small {
+            padding: 30px;
+            min-width: 200px;
+        }
     }
 }
 
