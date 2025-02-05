@@ -1,1 +1,51 @@
-<p>aanmelden works!</p>
+@if(step === 1){
+    <h2>Persoonlijke Gegevens</h2>
+    <form [formGroup]="aanmeldingForm">
+        <label>Naam:</label>
+        <input id="name" formControlName="name" type="text" required />
+        
+        <label>Adres:</label>
+        <input id="address" formControlName="address" type="text" required />
+        
+        <label>Geboortedatum:</label>
+        <input id="dateOfBirth" formControlName="dateOfBirth" type="date" required />
+        
+        <label>Telefoonnummer:</label>
+        <input id="telephone" formControlName="telephone" type="text" required />
+        
+        <label>E-mail:</label>
+        <input id="email" formControlName="email" type="email" required />
+    </form>
+    <button (click)="nextStep()">Volgende</button>
+}
+
+  
+@if(step === 2){
+    <h2>Behandeling Kiezen</h2>
+    <form [formGroup]="aanmeldingForm">
+      <label>Behandeling:</label>
+      <select id="behandeling" formControlName="behandeling">
+        @for(optie of behandelOptions; track optie){
+            <option [value]="optie">{{ optie }}</option>
+        }
+      </select>
+    </form>
+    <button (click)="previousStep()">Terug</button>
+    <button (click)="nextStep()">Volgende</button>
+}
+  
+@if(step === 3){
+    <h2>Datum en Tijd Kiezen</h2>
+    <button (click)="goToPreviousWeek()">Vorige week</button>
+    <button (click)="goToNextWeek()">Volgende week</button>
+    
+    <form [formGroup]="aanmeldingForm">
+      <label>Datum:</label>
+      <input id="selectedDate" formControlName="selectedDate" type="date" />
+      
+      <label>Tijd:</label>
+      <input id="selectedTime" formControlName="selectedTime" type="time" />
+    </form>
+    <button (click)="previousStep()">Terug</button>
+    <button (click)="submitAanmelding()">Verzenden</button>
+}
