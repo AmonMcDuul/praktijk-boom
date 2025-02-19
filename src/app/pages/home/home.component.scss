@@ -1,4 +1,4 @@
-@import '../../../styles.scss';
+@use '../../../styles.scss' as *;
 
 .about-container {
       margin: 0 auto;
@@ -6,34 +6,31 @@
 
 .hero {
     display: flex;
-    background: linear-gradient(to right, #f2f2f2 20%, rgba(0, 0, 0, 0)), 
-                // url('https://i.ibb.co/d0LHvdR/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background.jpg') right center no-repeat;
+    align-items: center;  /* Centers content vertically */
+    justify-content: flex-start;  /* Aligns content to the left */
+    background: linear-gradient(to right, #f2f2f2 10%, rgba(0, 0, 0, 0)), 
                 url('https://images.pexels.com/photos/1673973/pexels-photo-1673973.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') right center no-repeat;
-    background-size: cover; 
-    padding: 0px 60px;
+    background-size: cover;
+    padding: 0 60px;
     color: rgb(0, 0, 0);
-    margin-bottom: 60px;
     text-align: left;
-    min-height: 50vw;
-    
+    height: calc(100vh - 100px); /* Adjust for header height */
+
     .hero-content {
-        padding-top: 200px;
-        padding-bottom: 200px;
-        padding-right: 20px;
         max-width: 50%;
-    }
-    
+    }   
+
     h1 {
         font-size: 3rem;
         margin-bottom: 20px;
     }
-    
+
     p {
         font-size: 1.2rem;
         margin-top: 20px;
         line-height: 1.6;
     }
-    }
+}
 
 // Sectie stijlen
 .section {
@@ -44,13 +41,24 @@
 .values {
     padding: 40px 20px 120px; // Padding rondom
     text-align: center;
-    // background-color: #ebebeb;
-    background: linear-gradient(to right, #f2f2f2 20%, rgba(0, 0, 0, 0)), 
-                url('https://i.ibb.co/d0LHvdR/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background.jpg') right top no-repeat;
+    // background: linear-gradient(to right, #f2f2f2 20%, rgba(0, 0, 0, 0)), 
+    //             url('https://i.ibb.co/d0LHvdR/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background.jpg') right top no-repeat;
+    background-color: #ffeedd;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -20px; // Slight overlap to avoid gaps
+        left: 0;
+        width: 101%;
+        height: 200px; // Adjust wave height
+        background: url('../../../assets/img/wave-b-1.svg') no-repeat center bottom;
+        background-size: 100% auto;
+    }
 
     h2 {
         font-size: 2.5rem;
-        color: $secondary-color;
+        color: black;
         margin-bottom: 50px;
     }
 
@@ -89,7 +97,7 @@
                     transition: background-color 0.3s ease;
 
                     &:hover {
-                        background-color: darken(#ff9a93, 10%);
+                        background-color: #fd8f87; 
                     }
                 }
 
@@ -125,15 +133,27 @@
   .services {
     padding: 0px 60px;
     padding-bottom: 120px;
-    background-color: #f9f9f9;
+    background-color: #00656c;
+    padding-top: 80px;
     // background: linear-gradient(to right, #f2f2f2 01%, rgba(0, 0, 0, 0)), 
     // url('https://i.ibb.co/d0LHvdR/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background.jpg') right center no-repeat;
-
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -20px; // Slight overlap to avoid gaps
+        left: 0;
+        width: 101%;
+        height: 200px; // Adjust wave height
+        background: url('../../../assets/img/wave-y-1.svg') no-repeat center bottom;
+        background-size: 100% auto;
+    }
     h2 {
+        margin-top: 0;
         font-size: 2.5rem;
-        color: $secondary-color;
+        color: White;
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 80px;
     }
 
     h3 {
@@ -152,7 +172,8 @@
         gap: 30px;
 
         .service-item {
-            background-color: white;
+            background-color: #ffeedd;
+
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -176,7 +197,7 @@
                 box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 
                 i {
-                    color: darken(#ff9a93, 10%);
+                    color: #fd8f87;
                 }
             }
         }

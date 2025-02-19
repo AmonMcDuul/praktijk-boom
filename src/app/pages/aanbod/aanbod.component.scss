@@ -1,4 +1,4 @@
-@import '../../../styles.scss';
+@use '../../../styles.scss' as *;
 
 .services {
     padding: 0;
@@ -68,6 +68,8 @@
       
         .service-item {
           background-color: white;
+          background-color: #ffeedd;
+
           width: 100%; // Zorgt ervoor dat de vakjes flexibel blijven
           max-width: 320px; // Limiteert de maximale breedte van een vakje
           padding: 30px;
@@ -97,7 +99,7 @@
             transform: scale(1.05);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
             i{
-              color: darken(#ff9a93, 10%);
+              color: #fd8f87;
             }
           }
         }
