@@ -1,34 +1,89 @@
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    gap: 10px;
-    margin: 50px;
+.main-container {
+  height: 70vh;
+}
+
+.wizard {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.step-indicators {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px;
+    border: none;
+    background: #e0e0e0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+
+    &.active {
+      background: #007bff;
+      color: white;
+    }
+
+    &:hover {
+      background: #0056b3;
+      color: white;
+    }
   }
-  
+}
+
+.step-content {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: white;
+
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+
   label {
+    display: block;
+    margin-bottom: 5px;
     font-weight: bold;
+    color: #555;
   }
-  
-  input, select, button {
-    padding: 8px;
+
+  input,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     font-size: 1rem;
   }
-  
+
   button {
-    background-color: #007bff;
-    color: white;
+    padding: 10px 20px;
+    margin-right: 10px;
     border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: white;
     cursor: pointer;
-    margin-top: 10px;
-  
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #0056b3;
+    }
+
     &:disabled {
-      background-color: #cccccc;
+      background: #cccccc;
       cursor: not-allowed;
     }
   }
-  
-  p {
-    margin-top: 10px;
-    font-weight: bold;
-  }
+}

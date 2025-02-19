@@ -1,68 +1,61 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, ReactiveFormsModule} from '@angular/forms';
-import { Aanmelding } from '../../models/aanmelding.model';
+import { Component, OnInit } from '@angular/core';
 import { AanmeldingService } from '../../services/aanmelding.service';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-aanmelden',
-  imports: [ReactiveFormsModule],
   templateUrl: './aanmelden.component.html',
-  styleUrl: './aanmelden.component.scss'
+  styleUrls: ['./aanmelden.component.scss'],
+  imports: [ReactiveFormsModule, CommonModule]
 })
-export class AanmeldenComponent {
-  aanmeldingForm: FormGroup;
+export class AanmeldenComponent implements OnInit {
   behandelOptions: string[] = [];
   submissionSuccess: boolean | null = null;
-  step: number = 1;
   currentWeekStart: Date = new Date();
+  step$;
+  aanmeldingForm: FormGroup;
 
-  constructor(
-    private fb: FormBuilder,
-    private aanmeldingService: AanmeldingService
-  ) {
-    this.aanmeldingForm = this.fb.group({
-      name: ['', Validators.required],
-      address: ['', Validators.required],
-      dateOfBirth: ['', Validators.required],
-      telephone: ['', [Validators.required, Validators.pattern(/^\+?[0-9]{10,}$/)]],
-      email: ['', [Validators.required, Validators.email]],
-      behandeling: ['', Validators.required],
-      selectedDate: [''],
-      selectedTime: ['']
-    });
+  constructor(private aanmeldingService: AanmeldingService) {
+    this.aanmeldingForm = this.aanmeldingService.aanmeldingForm;
+    this.step$ = this.aanmeldingService.step$;
   }
 
   ngOnInit(): void {
     this.behandelOptions = this.aanmeldingService.getBehandelOptions();
   }
 
-  nextStep(): void {
-    if (this.step < 3) this.step++;
+  // goToNextWeek(): void {
+  //   this.currentWeekStart.setDate(this.currentWeekStart.getDate() + 7);
+  // }
+
+  // goToPreviousWeek(): void {
+  //   this.currentWeekStart.setDate(this.currentWeekStart.getDate() - 7);
+  // }
+
+  setStep(step: number): void {
+    this.aanmeldingService.setStep(step)
   }
 
   previousStep(): void {
-    if (this.step > 1) this.step--;
+    this.aanmeldingService.previousStep()
   }
 
-  goToNextWeek(): void {
-    this.currentWeekStart.setDate(this.currentWeekStart.getDate() + 7);
-  }
-
-  goToPreviousWeek(): void {
-    this.currentWeekStart.setDate(this.currentWeekStart.getDate() - 7);
+  nextStep(): void {
+    this.aanmeldingService.nextStep()
   }
 
   submitAanmelding(): void {
     if (this.aanmeldingForm.valid) {
-      const aanmelding: Aanmelding = this.aanmeldingForm.value;
+      const aanmelding = this.aanmeldingForm.value;
       this.aanmeldingService.submitAanmelding(aanmelding).subscribe(
-        response => {
+        (response) => {
           console.log('Aanmelding succesvol:', response);
           this.submissionSuccess = true;
           this.aanmeldingForm.reset();
-          this.step = 1;
+          this.aanmeldingService.setStep(1);
         },
-        error => {
+        (error) => {
           console.error('Fout bij aanmelden:', error);
           this.submissionSuccess = false;
         }

@@ -37,43 +37,7 @@
     }
   }
 
-  .voor-wie-container{
-    display: flex;
-    background-color: #ebebeb;
-    padding: 100px 60px;
-    color: rgb(0, 0, 0);
 
-    .voor-wie-content{
-      padding-right: 20px;
-  
-      h1 {
-        font-size: 3.5rem;
-        margin-bottom: 20px;
-        color: $primary-color;
-      }
-  
-      h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-      }
-  
-      p {
-        font-size: 1.2rem;
-        line-height: 1.6;
-      }
-    }
-  }
-
-  .list-container{
-    display: flex;
-    flex-direction: row;
-  }
-
-  .sublist-container{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-  }
 
   // Kernwaarden Sectie
   .values {
