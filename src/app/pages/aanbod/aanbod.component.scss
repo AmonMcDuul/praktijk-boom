@@ -2,33 +2,71 @@
 
 .services {
     padding: 0;
-    background-color: #f9f9f9;
-  
+    background-color: #AAC9CB;
+
     // Achtergrond header met gradient
-    .services-header {
-      background: linear-gradient(to right, #f2f2f2 10%, rgba(0, 0, 0, 0)), 
-                  url('https://i.ibb.co/d0LHvdR/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background.jpg') 
-                  top center no-repeat;
-      background-size: cover;
-      padding: 80px 60px;
-      text-align: left;
+    // .services-header {
+    //   background: linear-gradient(to right, #f2f2f2 50%, rgba(0, 0, 0, 0)), 
+    //               url('https://i.ibb.co/d0LHvdR/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background.jpg') 
+    //               right center no-repeat;
+    //   background-size: contain;
+    //   padding: 80px 60px;
+    //   text-align: left;
+    //   height: calc(50vh - 100px);
   
-      h2 {
-        font-size: 3rem;
-        color: rgb(0, 0, 0);
-        margin-bottom: 20px;
-        padding-right: 20px;
-        max-width: 50%;
-      }
+    //   h2 {
+    //     font-size: 3rem;
+    //     color: rgb(0, 0, 0);
+    //     margin-bottom: 20px;
+    //     padding-right: 20px;
+    //     max-width: 50%;
+    //   }
   
-      p {
-        font-size: 1.2rem;
-        color: #000000;
-        padding-right: 20px;
-        max-width: 50%;
-        line-height: 1.6;
-      }
+    //   p {
+    //     font-size: 1.2rem;
+    //     color: #000000;
+    //     padding-right: 20px;
+    //     max-width: 50%;
+    //     line-height: 1.6;
+    //   }
+    // }
+    .services-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px;
+      position: relative;
+      background-color: #fff8f2;
     }
+    
+    .services-text {
+      width: 55%; /* Adjust text width */
+      text-align: left;
+    }
+    
+    .services-text h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    
+    .services-text p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+    
+    .services-image {
+      width: 40%; /* Adjust image width */
+      // margin-top: -30px; /* Moves it slightly into the next section */
+    }
+    
+    .services-image img {
+      width: 100%;
+      height: auto;
+      border: 8px solid white;
+      border-radius: 10px;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
   
     .therapy-section {
       padding: 60px 20px;
@@ -43,18 +81,28 @@
       .therapy-description {
         text-align: center;
         font-size: 1.1rem;
-        color: #555;
         max-width: 600px;
         margin: 0 auto 40px auto;
       }
   
       &.group-therapy {
         // background-color: #eef7ff; // Lichtblauw
+        padding-top: 140px;
       }
   
       &.individual-therapy {
-        background-color: #ebebeb;
-
+        padding-bottom: 200px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -20px; // Slight overlap to avoid gaps
+            left: 0;
+            width: 101%;
+            height: 200px; // Adjust wave height
+            background: url('../../../assets/img/sin-y-1.svg') no-repeat center bottom;
+            background-size: 100% auto;
+        }
       }
     }
   
@@ -67,8 +115,7 @@
         margin: 0 auto;
       
         .service-item {
-          background-color: white;
-          background-color: #ffeedd;
+          background-color: #e5f4f6;
 
           width: 100%; // Zorgt ervoor dat de vakjes flexibel blijven
           max-width: 320px; // Limiteert de maximale breedte van een vakje
@@ -117,8 +164,9 @@
 
 .voor-wie-container{
   display: flex;
-  padding: 100px 60px;
+  padding: 40px 60px 80px;
   color: rgb(0, 0, 0);
+  background-color: #fff8f2;
 
   .voor-wie-content{
     padding-right: 20px;
@@ -140,6 +188,27 @@
     }
   }
 }
+
+.pill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill {
+  background-color: #e5f4f6;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: inline-block;
+  white-space: nowrap;
+  border: 1px solid black;
+
+  &.red{
+    background-color: #f6e5e5;
+  }
+}
+
 
 .list-container{
   display: flex;

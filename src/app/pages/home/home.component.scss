@@ -39,22 +39,22 @@
 }
 
 .values {
-    padding: 40px 20px 120px; // Padding rondom
+    padding: 10px 20px 120px;
     text-align: center;
     // background: linear-gradient(to right, #f2f2f2 20%, rgba(0, 0, 0, 0)), 
     //             url('https://i.ibb.co/d0LHvdR/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background.jpg') right top no-repeat;
-    background-color: #ffeedd;
-    position: relative;
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: -20px; // Slight overlap to avoid gaps
-        left: 0;
-        width: 101%;
-        height: 200px; // Adjust wave height
-        background: url('../../../assets/img/wave-b-1.svg') no-repeat center bottom;
-        background-size: 100% auto;
-    }
+    background-color: #fff8f2;
+    // position: relative;
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: -20px; // Slight overlap to avoid gaps
+    //     left: 0;
+    //     width: 101%;
+    //     height: 200px; // Adjust wave height
+    //     background: url('../../../assets/img/sin-b-1.svg') no-repeat center bottom;
+    //     background-size: 100% auto;
+    // }
 
     h2 {
         font-size: 2.5rem;
@@ -132,8 +132,9 @@
 
   .services {
     padding: 0px 60px;
-    padding-bottom: 120px;
-    background-color: #00656c;
+    padding-bottom: 200px;
+    background-color: #AAC9CB;
+    
     padding-top: 80px;
     // background: linear-gradient(to right, #f2f2f2 01%, rgba(0, 0, 0, 0)), 
     // url('https://i.ibb.co/d0LHvdR/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background.jpg') right center no-repeat;
@@ -145,13 +146,12 @@
         left: 0;
         width: 101%;
         height: 200px; // Adjust wave height
-        background: url('../../../assets/img/wave-y-1.svg') no-repeat center bottom;
+        background: url('../../../assets/img/sin-y-1.svg') no-repeat center bottom;
         background-size: 100% auto;
     }
     h2 {
         margin-top: 0;
         font-size: 2.5rem;
-        color: White;
         text-align: center;
         margin-bottom: 80px;
     }
@@ -172,8 +172,7 @@
         gap: 30px;
 
         .service-item {
-            background-color: #ffeedd;
-
+            background-color: #e5f4f6;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
