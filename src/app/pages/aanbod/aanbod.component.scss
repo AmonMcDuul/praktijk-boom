@@ -164,11 +164,49 @@
 
 .voor-wie-container{
   display: flex;
-  padding: 40px 60px 80px;
+  padding: 40px 60px 240px;
   color: rgb(0, 0, 0);
   background-color: #fff8f2;
+  position: relative;
+  &::after {
+      content: "";
+      position: absolute;
+      bottom: -20px; // Slight overlap to avoid gaps
+      left: 0;
+      width: 100%;
+      height: 200px; // Adjust wave height
+      background: url('../../../assets/img/sin-bb-1.svg') no-repeat center bottom;
+      background-size: cover;
+  }
 
   .voor-wie-content{
+    padding-right: 20px;
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      color: $primary-color;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+.voor-wie-niet-container{
+  display: flex;
+  padding: 0px 60px 80px;
+  color: rgb(0, 0, 0);
+  background-color: #AAC9CB;
+
+  .voor-wie-niet-content{
     padding-right: 20px;
 
     h1 {
@@ -210,12 +248,14 @@
 }
 
 
-.list-container{
+.text-container{
   display: flex;
   flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
 
-.sublist-container{
+.sub-container{
   display: flex;
   flex-direction: column;
   width: 50%;
