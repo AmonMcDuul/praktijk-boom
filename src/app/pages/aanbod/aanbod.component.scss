@@ -98,10 +98,10 @@
             position: absolute;
             bottom: -20px; // Slight overlap to avoid gaps
             left: 0;
-            width: 101%;
+            width: 100%;
             height: 200px; // Adjust wave height
             background: url('../../../assets/img/sin-y-1.svg') no-repeat center bottom;
-            background-size: 100% auto;
+            background-size: cover;
         }
       }
     }
