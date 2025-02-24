@@ -1,15 +1,17 @@
 .main-container {
+  padding: 40px;
   height: 70vh;
+  background-color: #e5f4f6;
 }
 
 .wizard {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background: #f9f9f9;
+  // background: #fff8f2;
+  background: white;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
 }
 
 .step-indicators {
@@ -28,12 +30,13 @@
     transition: background 0.3s ease, color 0.3s ease;
 
     &.active {
-      background: #007bff;
+      // background: #AAC9CB;
+      background: #00656c;
       color: white;
     }
 
     &:hover {
-      background: #0056b3;
+      background: #96babd;
       color: white;
     }
   }
@@ -59,7 +62,7 @@
 
   input,
   select {
-    width: 100%;
+    width: 96%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
@@ -72,13 +75,13 @@
     margin-right: 10px;
     border: none;
     border-radius: 5px;
-    background: #007bff;
+    background: #00656c;
     color: white;
     cursor: pointer;
     transition: background 0.3s ease;
 
     &:hover {
-      background: #0056b3;
+      background: #96babd;
     }
 
     &:disabled {
@@ -86,4 +89,27 @@
       cursor: not-allowed;
     }
   }
+}
+
+textarea {
+  resize: none;
+  width: 95%; 
+}
+
+.day-selection button,
+.time-selection button,
+.week-selection button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  background: #e0e0e0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.day-selection button.active,
+.time-selection button.active {
+  background: #00656c;
+  color: white;
 }

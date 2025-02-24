@@ -45,6 +45,10 @@ export class AanmeldenComponent implements OnInit {
     this.aanmeldingService.nextStep()
   }
 
+  getFullDate(): string {
+    return this.aanmeldingService.getFullDate()
+  }
+
   submitAanmelding(): void {
     if (this.aanmeldingForm.valid) {
       const aanmelding = this.aanmeldingForm.value;

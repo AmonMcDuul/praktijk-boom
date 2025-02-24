@@ -1,18 +1,20 @@
 <div class="main-container">
   <div class="wizard">
     <div class="step-indicators">
-      <button
-        *ngFor="let step of [1, 2, 3]; let i = index"
-        [class.active]="(step$ | async) === step"
-        (click)="setStep(step)"
-      >
-        Stap {{ step }}
+      <button [class.active]="(step$ | async) === 1" (click)="setStep(1)">
+        Gegevens
+      </button>
+      <button [class.active]="(step$ | async) === 2" (click)="setStep(2)">
+        Behandeling
+      </button>
+      <button [class.active]="(step$ | async) === 3" (click)="setStep(3)">
+        Datum & tijd
       </button>
     </div>
 
     <div class="step-content">
       @if ((step$ | async) === 1) {
-        <h2>Persoonlijke Gegevens</h2>
+        <h2>Persoonlijke gegevens</h2>
         <form [formGroup]="aanmeldingForm">
           <label>Naam:</label>
           <input id="name" formControlName="name" type="text" required />
@@ -33,30 +35,60 @@
       }
 
       @if ((step$ | async) === 2) {
-        <h2>Behandeling Kiezen</h2>
+        <h2>Behandeling</h2>
         <form [formGroup]="aanmeldingForm">
-          <label>Behandeling:</label>
+          <!-- <label>Behandeling:</label> -->
           <select id="behandeling" formControlName="behandeling">
             @for (optie of behandelOptions; track optie) {
               <option [value]="optie">{{ optie }}</option>
             }
           </select>
+          <label>Opmerking: </label>
+          <textarea  id="opmerking" formControlName="opmerking" type="text" rows="10"></textarea>
         </form>
+        <br>
         <button (click)="previousStep()">Terug</button>
         <button (click)="nextStep()">Volgende</button>
       }
 
       @if ((step$ | async) === 3) {
-        <h2>Datum en Tijd Kiezen</h2>
+        <h2>Datum en tijd</h2>
         <form [formGroup]="aanmeldingForm">
-          <label>Datum:</label>
-          <input id="selectedDate" formControlName="selectedDate" type="date" />
-
-          <label>Tijd:</label>
-          <input id="selectedTime" formControlName="selectedTime" type="time" />
+          <label>Week:</label>
+          <div class="week-selection">
+            <button type="button" (click)="aanmeldingForm.patchValue({ selectedWeek: aanmeldingForm.value.selectedWeek - 1 })">
+              ← Vorige week
+            </button>
+            <span>Week {{ aanmeldingForm.value.selectedWeek }}</span>
+            <button type="button" (click)="aanmeldingForm.patchValue({ selectedWeek: aanmeldingForm.value.selectedWeek + 1 })">
+              Volgende week →
+            </button>
+          </div>
+        
+          <label>Dag:</label>
+          <div class="day-selection">
+            <button type="button" *ngFor="let day of ['Maandag', 'Woensdag', 'Donderdag']"
+              [class.active]="aanmeldingForm.value.selectedDay === day"
+              (click)="aanmeldingForm.patchValue({ selectedDay: day })">
+              {{ day }}
+            </button>
+          </div>
+        
+          <label>Tijdvak:</label>
+          <div class="time-selection">
+            <button type="button" *ngFor="let time of ['09:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00']"
+              [class.active]="aanmeldingForm.value.selectedTime === time"
+              (click)="aanmeldingForm.patchValue({ selectedTime: time })">
+              {{ time }}
+            </button>
+          </div>
+        
+          <h3>Gekozen datum en tijd: {{ getFullDate() }} om {{ aanmeldingForm.value.selectedTime }}</h3>
         </form>
+        
         <button (click)="previousStep()">Terug</button>
         <button (click)="submitAanmelding()">Verzenden</button>
+        
       }
     </div>
   </div>
