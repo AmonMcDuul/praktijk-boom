@@ -31,6 +31,8 @@
           <label>E-mail:</label>
           <input id="email" formControlName="email" type="email" required />
         </form>
+        <br>
+        <br>
         <button (click)="nextStep()">Volgende</button>
       }
 
@@ -46,6 +48,7 @@
           <label>Opmerking: </label>
           <textarea  id="opmerking" formControlName="opmerking" type="text" rows="10"></textarea>
         </form>
+        <br>
         <br>
         <button (click)="previousStep()">Terug</button>
         <button (click)="nextStep()">Volgende</button>
@@ -82,10 +85,11 @@
               {{ time }}
             </button>
           </div>
-        
+          <br>
           <h3>Gekozen datum en tijd: {{ getFullDate() }} om {{ aanmeldingForm.value.selectedTime }}</h3>
         </form>
-        
+        <br>
+        <br>
         <button (click)="previousStep()">Terug</button>
         <button (click)="submitAanmelding()">Verzenden</button>
         

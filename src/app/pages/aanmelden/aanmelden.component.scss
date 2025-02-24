@@ -1,15 +1,18 @@
 .main-container {
   padding: 40px;
-  height: 70vh;
+  // height: 70vh;
+  height: calc(100vh - 390px); /* Adjust for header height */
   background-color: #e5f4f6;
+  background: linear-gradient(to right, #ffffff94 1%, rgba(0, 0, 0, 0)), 
+  url('https://i.ibb.co/d0LHvdR/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background.jpg') right center no-repeat;
+  background-size: cover;
 }
 
 .wizard {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  // background: #fff8f2;
-  background: white;
+  background: #e5f4f6df;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -24,7 +27,7 @@
     margin: 0 5px;
     padding: 10px;
     border: none;
-    background: #e0e0e0;
+    background: #96babd;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease;
@@ -36,7 +39,7 @@
     }
 
     &:hover {
-      background: #96babd;
+      background: #00656c;
       color: white;
     }
   }
@@ -46,18 +49,16 @@
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  background: white;
+  background: #e5f4f6f4;
 
   h2 {
     margin-bottom: 20px;
-    color: #333;
   }
 
   label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #555;
   }
 
   input,
@@ -75,13 +76,13 @@
     margin-right: 10px;
     border: none;
     border-radius: 5px;
-    background: #00656c;
+    background: #96babd;
     color: white;
     cursor: pointer;
     transition: background 0.3s ease;
 
-    &:hover {
-      background: #96babd;
+    &:hover { 
+      background: #00656c;
     }
 
     &:disabled {
@@ -91,9 +92,16 @@
   }
 }
 
+select {
+  background-color: white;
+  color: black; 
+}
+
 textarea {
   resize: none;
   width: 95%; 
+  font-family: 'Arial', sans-serif; 
+  font-size: 16px; 
 }
 
 .day-selection button,
@@ -102,10 +110,13 @@ textarea {
   padding: 10px 15px;
   margin: 5px;
   border: none;
-  background: #e0e0e0;
+  background: #96babd;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
+  &:hover {
+    background: #00656c;
+  }
 }
 
 .day-selection button.active,
