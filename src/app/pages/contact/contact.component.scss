@@ -1,1 +1,170 @@
 @use '../../../styles.scss' as *;
+
+.container {
+    height: 70vh;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+        height: auto; /* Adjust height for mobile */
+    }
+}
+
+.contact-container {
+    background-color: #fff8f2; /* Light background color */
+    color: #000000; /* Dark text color */
+    padding: 60px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        padding: 40px 20px; /* Reduce padding for mobile */
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        color: #00656c; /* Primary color */
+        margin-bottom: 10px;
+
+        @media (max-width: 768px) {
+            font-size: 2rem; /* Smaller font size for mobile */
+        }
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+        color: #555; /* Subdued text color */
+        margin-bottom: 30px;
+
+        @media (max-width: 768px) {
+            font-size: 1rem; /* Smaller font size for mobile */
+        }
+    }
+
+    textarea {
+        width: 95%;
+        padding: 15px;
+        border-radius: 8px;
+        border: 2px solid rgba(#00656c, 0.3); /* Primary color with transparency */
+        background: rgba(255, 255, 255, 0.1);
+        color: #000000; /* Dark text color */
+        resize: none;
+        margin-bottom: 20px;
+        font-family: inherit;
+        transition: border-color 0.3s ease;
+
+        @media (max-width: 768px) {
+            width: 90%; /* Full width on mobile */
+        }
+
+        &:focus {
+            border-color: #00656c; /* Primary color */
+            outline: none;
+        }
+
+        &::placeholder {
+            color: rgba(#000000, 0.6); /* Dark text color with transparency */
+        }
+    }
+
+    .contact-details {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-bottom: 20px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr; /* Stack inputs vertically on mobile */
+        }
+
+        input {
+            padding: 12px;
+            border-radius: 8px;
+            border: 2px solid rgba(#00656c, 0.3); /* Primary color with transparency */
+            background: rgba(255, 255, 255, 0.1);
+            color: #000000; /* Dark text color */
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+
+            &:focus {
+                border-color: #00656c; /* Primary color */
+                outline: none;
+            }
+
+            &::placeholder {
+                color: rgba(#000000, 0.6); /* Dark text color with transparency */
+            }
+        }
+    }
+
+    button {
+        padding: 12px 30px;
+        border-radius: 8px;
+        background: #00656c; /* Primary color */
+        color: white;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.3s ease;
+
+        @media (max-width: 768px) {
+            width: 100%; /* Full width on mobile */
+        }
+
+        &:hover {
+            background: darken(#00656c, 10%); /* Darker primary color */
+            transform: translateY(-2px);
+        }
+
+        &:disabled {
+            background: rgba(#00656c, 0.5); /* Primary color with transparency */
+            cursor: not-allowed;
+        }
+
+        i {
+            margin-left: 8px;
+        }
+    }
+
+    .confirmation-msg {
+        margin-top: 20px;
+        font-size: 1.1rem;
+        color: #7BA05B; /* Accent color */
+        font-weight: bold;
+
+        @media (max-width: 768px) {
+            font-size: 1rem; /* Smaller font size for mobile */
+        }
+    }
+}
+
+.invalid-input {
+    border: 2px solid #fd8f87 !important; /* Error color */
+    animation: shake 0.5s ease-in-out; /* Optional: Add a shake animation for emphasis */
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

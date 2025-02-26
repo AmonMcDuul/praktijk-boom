@@ -1,11 +1,14 @@
 .main-container {
   padding: 40px;
-  // height: 70vh;
-  height: calc(100vh - 390px); /* Adjust for header height */
+  min-height: calc(70vh); /* Adjust for header height */
   background-color: #e5f4f6;
-  background: linear-gradient(to right, #ffffff94 1%, rgba(0, 0, 0, 0)), 
-  url('https://i.ibb.co/d0LHvdR/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background.jpg') right center no-repeat;
+  background: linear-gradient(to right, #ffffff94 1%, rgba(0, 0, 0, 0)),
+              url('https://i.ibb.co/d0LHvdR/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background.jpg') right center no-repeat;
   background-size: cover;
+
+  @media (max-width: 768px) {
+    padding: 20px; /* Reduce padding for mobile */
+  }
 }
 
 .wizard {
@@ -15,12 +18,21 @@
   background: #e5f4f6df;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    padding: 15px; /* Reduce padding for mobile */
+  }
 }
 
 .step-indicators {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Stack buttons vertically on mobile */
+    gap: 10px; /* Add space between buttons */
+  }
 
   button {
     flex: 1;
@@ -32,8 +44,11 @@
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease;
 
+    @media (max-width: 768px) {
+      margin: 0; /* Remove horizontal margin on mobile */
+    }
+
     &.active {
-      // background: #AAC9CB;
       background: #00656c;
       color: white;
     }
@@ -51,8 +66,16 @@
   border-radius: 5px;
   background: #e5f4f6f4;
 
+  @media (max-width: 768px) {
+    padding: 15px; /* Reduce padding for mobile */
+  }
+
   h2 {
     margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem; /* Smaller font size for mobile */
+    }
   }
 
   label {
@@ -69,6 +92,10 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
+
+    @media (max-width: 768px) {
+      width: 95%; /* Full width on mobile */
+    }
   }
 
   button {
@@ -81,7 +108,12 @@
     cursor: pointer;
     transition: background 0.3s ease;
 
-    &:hover { 
+    @media (max-width: 768px) {
+      width: 100%; /* Full width on mobile */
+      margin: 5px 0; /* Add space between buttons */
+    }
+
+    &:hover {
       background: #00656c;
     }
 
@@ -94,14 +126,18 @@
 
 select {
   background-color: white;
-  color: black; 
+  color: black;
 }
 
 textarea {
   resize: none;
-  width: 95%; 
-  font-family: 'Arial', sans-serif; 
-  font-size: 16px; 
+  width: 95%;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+
+  @media (max-width: 768px) {
+    width: 95%; /* Full width on mobile */
+  }
 }
 
 .day-selection button,
@@ -114,6 +150,12 @@ textarea {
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
+
+  @media (max-width: 768px) {
+    width: 100%; /* Full width on mobile */
+    margin: 5px 0; /* Add space between buttons */
+  }
+
   &:hover {
     background: #00656c;
   }
@@ -123,4 +165,33 @@ textarea {
 .time-selection button.active {
   background: #00656c;
   color: white;
+}
+
+.week-selection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Stack buttons vertically on mobile */
+    gap: 10px; /* Add space between buttons */
+  }
+
+  button {
+    padding: 10px 15px;
+    border: none;
+    background: #96babd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background: #00656c;
+    }
+  }
+
+  span {
+    font-weight: bold;
+  }
 }

@@ -2,52 +2,104 @@
 
 .header-container {
     height: 100px;
-    // background: #daecd4;
     background: #00656c;
     color: #f3f3f3;
-    // color: #ff9a93;
     display: flex;
     align-items: center;
-    padding-left: 60px;
+    justify-content: space-between; /* Align items to the sides */
+    padding: 0 60px;
     overflow: hidden;
+    position: relative;
+    z-index: 1000;
+
+    h1 {
+        font-size: 1.8rem; /* Adjust as needed */
+        margin: 0; /* Remove default margin */
+    }
+
+    .hamburger {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background: #f3f3f3;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+    }
+
+    .header-nav {
+        display: flex;
+        gap: 40px;
+
+        a {
+            color: #f3f3f3;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #ff9a93;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 2px;
+                background: #ff9a93;
+                transition: width 0.3s ease;
+                position: absolute;
+                bottom: -6px;
+                left: 0;
+            }
+
+            &:hover:after {
+                width: 100%;
+            }
+        }
+    }
 }
 
-img {
-    width: 50%;
-    animation: glitch 10s ease-in-out;
-}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 20px; /* Reduce padding for mobile */
+        overflow: visible;
 
-.header-nav {
-    margin-left: 25%;
-    display: flex;
-    gap: 40px;
-
-    a {
-        color: #f3f3f3;
-        text-decoration: none;
-        font-size: 1.2rem;
-        font-weight: 500;
-        position: relative;
-        transition: color 0.3s ease;
-
-        &:hover {
-            color: #ff9a93;
+        .hamburger {
+            display: flex; /* Show hamburger menu on mobile */
         }
 
-        &:after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 2px;
-            background: #ff9a93;
-            transition: width 0.3s ease;
+        .header-nav {
+            display: flex; /* Always flex for transition */
+            flex-direction: column;
             position: absolute;
-            bottom: -6px;
+            top: 100%; /* Position below the header */
             left: 0;
-        }
+            width: 80%;
+            background: #00656c;
+            padding: 20px;
+            border-bottom: 2px solid darken(#00656c, 10%);
+            z-index: 1001;
+            opacity: 0; /* Start invisible */
+            visibility: hidden; /* Start hidden */
+            transition: opacity 0.3s ease, visibility 0.3s ease;
 
-        &:hover:after {
-            width: 100%;
+            &.active {
+                opacity: 1; /* Fade in */
+                visibility: visible; /* Make visible */
+            }
+
+            a {
+                font-size: 1.1rem;
+                padding: 10px 0;
+            }
         }
     }
 }

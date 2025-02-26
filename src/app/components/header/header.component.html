@@ -1,7 +1,15 @@
 <div class="header-container">
-    <!-- <a href=""><img src="https://i.ibb.co/pRxRwNk/FSLT1K.png" alt="logo"></a> -->
-     <h1>Praktijk van der Boom</h1>
-    <nav class="header-nav">
+    <h1>Praktijk van der Boom</h1>
+
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" (click)="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="header-nav" [class.active]="isMenuOpen">
         <a href="">Home</a>
         <a href="/aanbod">Aanbod</a>
         <a href="/about">Over mij</a>

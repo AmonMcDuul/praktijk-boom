@@ -4,260 +4,360 @@
     padding: 0;
     background-color: #AAC9CB;
 
-    // Achtergrond header met gradient
-    // .services-header {
-    //   background: linear-gradient(to right, #f2f2f2 50%, rgba(0, 0, 0, 0)), 
-    //               url('https://i.ibb.co/d0LHvdR/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background.jpg') 
-    //               right center no-repeat;
-    //   background-size: contain;
-    //   padding: 80px 60px;
-    //   text-align: left;
-    //   height: calc(50vh - 100px);
-  
-    //   h2 {
-    //     font-size: 3rem;
-    //     color: rgb(0, 0, 0);
-    //     margin-bottom: 20px;
-    //     padding-right: 20px;
-    //     max-width: 50%;
-    //   }
-  
-    //   p {
-    //     font-size: 1.2rem;
-    //     color: #000000;
-    //     padding-right: 20px;
-    //     max-width: 50%;
-    //     line-height: 1.6;
-    //   }
-    // }
     .services-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 60px;
-      position: relative;
-      background-color: #fff8f2;
-    }
-    
-    .services-text {
-      width: 55%; /* Adjust text width */
-      text-align: left;
-    }
-    
-    .services-text h2 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-    
-    .services-text p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-    
-    .services-image {
-      width: 40%; /* Adjust image width */
-      // margin-top: -30px; /* Moves it slightly into the next section */
-    }
-    
-    .services-image img {
-      width: 100%;
-      height: auto;
-      border: 8px solid white;
-      border-radius: 10px;
-      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-    }
-    
-  
-    .therapy-section {
-      padding: 60px 20px;
-  
-      h3 {
-        font-size: 2.2rem;
-        color: $primary-color;
-        text-align: center;
-        margin-bottom: 20px;
-      }
-  
-      .therapy-description {
-        text-align: center;
-        font-size: 1.1rem;
-        max-width: 600px;
-        margin: 0 auto 40px auto;
-      }
-  
-      &.group-therapy {
-        // background-color: #eef7ff; // Lichtblauw
-        padding-top: 140px;
-      }
-  
-      &.individual-therapy {
-        padding-bottom: 280px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px;
         position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: -20px; // Slight overlap to avoid gaps
-            left: 0;
-            width: 100%;
-            height: 200px; // Adjust wave height
-            background: url('../../../assets/img/sin-y-1.svg') no-repeat center bottom;
-            background-size: cover;
+        background-color: #fff8f2;
+
+        @media (max-width: 768px) {
+            flex-direction: column; /* Stack content vertically on mobile */
+            padding: 40px 20px; /* Reduce padding for mobile */
         }
-      }
     }
-  
+
+    .services-text {
+        width: 55%; /* Adjust text width */
+        text-align: left;
+
+        @media (max-width: 768px) {
+            width: 100%; /* Full width on mobile */
+            text-align: center; /* Center text on mobile */
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+
+            @media (max-width: 768px) {
+                font-size: 2.5rem; /* Smaller font size for mobile */
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+
+            @media (max-width: 768px) {
+                font-size: 1rem; /* Smaller font size for mobile */
+            }
+        }
+    }
+
+    .services-image {
+        width: 40%; /* Adjust image width */
+
+        @media (max-width: 768px) {
+            width: 100%; /* Full width on mobile */
+            margin-top: 40px; /* Add space between text and image */
+            text-align: center; /* Center image on mobile */
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border: 8px solid white;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+
+            @media (max-width: 768px) {
+                width: 80%; /* Adjust image size for mobile */
+            }
+        }
+    }
+
+    .therapy-section {
+        padding: 60px 20px;
+
+        @media (max-width: 768px) {
+            padding: 40px 20px; /* Reduce padding for mobile */
+        }
+
+        h3 {
+            font-size: 2.2rem;
+            color: $primary-color;
+            text-align: center;
+            margin-bottom: 20px;
+
+            @media (max-width: 768px) {
+                font-size: 2rem; /* Smaller font size for mobile */
+            }
+        }
+
+        .therapy-description {
+            text-align: center;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+
+            @media (max-width: 768px) {
+                font-size: 1rem; /* Smaller font size for mobile */
+            }
+        }
+
+        &.group-therapy {
+            padding-top: 140px;
+
+            @media (max-width: 768px) {
+                padding-top: 80px; /* Adjust padding for mobile */
+            }
+        }
+
+        &.individual-therapy {
+            padding-bottom: 280px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -20px;
+                left: 0;
+                width: 100%;
+                height: 200px;
+                background: url('../../../assets/img/sin-y-1.svg') no-repeat center bottom;
+                background-size: cover;
+            }
+
+            @media (max-width: 768px) {
+                padding-bottom: 200px; /* Adjust padding for mobile */
+            }
+        }
+    }
+
     .services-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Dynamische kolommen
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
-        justify-items: center; // Centreert de vakjes horizontaal
+        justify-items: center;
         max-width: 1600px;
         margin: 0 auto;
-      
-        .service-item {
-          background-color: #e5f4f6;
 
-          width: 100%; // Zorgt ervoor dat de vakjes flexibel blijven
-          max-width: 320px; // Limiteert de maximale breedte van een vakje
-          padding: 30px;
-          border-radius: 10px;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-          text-align: center;
-          transition: all 0.3s ease-in-out;
-      
-          i {
-            font-size: 2.5rem;
-            color: #7BA05B;
-            margin-bottom: 15px;
-          }
-      
-          h4 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-          }
-      
-          p {
-            font-size: 1rem;
-            line-height: 1.5;
-            color: #555;
-          }
-      
-          &:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-            i{
-              color: #fd8f87;
-            }
-          }
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr; /* Stack items vertically on mobile */
+            gap: 20px; /* Reduce gap for mobile */
         }
-      }
-  .small-container{
+
+        .service-item {
+            background-color: #e5f4f6;
+            width: 100%;
+            max-width: 320px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+
+            i {
+                font-size: 2.5rem;
+                color: #7BA05B;
+                margin-bottom: 15px;
+            }
+
+            h4 {
+                font-size: 1.4rem;
+                margin-bottom: 10px;
+
+                @media (max-width: 768px) {
+                    font-size: 1.2rem; /* Smaller font size for mobile */
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.5;
+                color: #555;
+
+                @media (max-width: 768px) {
+                    font-size: 0.9rem; /* Smaller font size for mobile */
+                }
+            }
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+                i {
+                    color: #fd8f87;
+                }
+            }
+        }
+    }
+
+    .small-container {
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: 768px) {
+            flex-direction: column; /* Stack items vertically on mobile */
+            align-items: center; /* Center items on mobile */
+        }
+
+        .small {
+            padding: 20px 0px;
+            min-width: 100px;
+            font-weight: bold;
+
+            @media (max-width: 768px) {
+                min-width: 60%; /* Full width on mobile */
+                margin-bottom: 20px; /* Add space between items */
+            }
+        }
+    }
+}
+
+.voor-wie-container {
     display: flex;
-    justify-content: center;
-    .small {
-        padding: 20px 0px;
-        min-width: 100px;
-        font-weight: bold;
+    padding: 0px 60px 240px;
+    color: rgb(0, 0, 0);
+    background-color: #fff8f2;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        background: url('../../../assets/img/sin-bb-1.svg') no-repeat center bottom;
+        background-size: cover;
     }
-  }
+
+    @media (max-width: 768px) {
+        flex-direction: column; /* Stack content vertically on mobile */
+        padding: 40px 20px 150px; /* Reduce padding for mobile */
+    }
+
+    .voor-wie-content {
+        padding-right: 20px;
+
+        @media (max-width: 768px) {
+            padding-right: 0; /* Remove padding for mobile */
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: $primary-color;
+
+            @media (max-width: 768px) {
+                font-size: 2.5rem; /* Smaller font size for mobile */
+            }
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+
+            @media (max-width: 768px) {
+                font-size: 1.8rem; /* Smaller font size for mobile */
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+
+            @media (max-width: 768px) {
+                font-size: 1rem; /* Smaller font size for mobile */
+            }
+        }
+    }
 }
 
-.voor-wie-container{
-  display: flex;
-  padding: 0px 60px 240px;
-  color: rgb(0, 0, 0);
-  background-color: #fff8f2;
-  position: relative;
-  &::after {
-      content: "";
-      position: absolute;
-      bottom: -20px; // Slight overlap to avoid gaps
-      left: 0;
-      width: 100%;
-      height: 200px; // Adjust wave height
-      background: url('../../../assets/img/sin-bb-1.svg') no-repeat center bottom;
-      background-size: cover;
-  }
+.voor-wie-niet-container {
+    display: flex;
+    padding: 0px 60px 80px;
+    color: rgb(0, 0, 0);
+    background-color: #AAC9CB;
 
-  .voor-wie-content{
-    padding-right: 20px;
-
-    h1 {
-      font-size: 3.5rem;
-      margin-bottom: 20px;
-      color: $primary-color;
+    @media (max-width: 768px) {
+        flex-direction: column; /* Stack content vertically on mobile */
+        padding: 40px 20px; /* Reduce padding for mobile */
     }
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+    .voor-wie-niet-content {
+        padding-right: 20px;
+
+        @media (max-width: 768px) {
+            padding-right: 0; /* Remove padding for mobile */
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: $primary-color;
+
+            @media (max-width: 768px) {
+                font-size: 2.5rem; /* Smaller font size for mobile */
+            }
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+
+            @media (max-width: 768px) {
+                font-size: 1.8rem; /* Smaller font size for mobile */
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+
+            @media (max-width: 768px) {
+                font-size: 1rem; /* Smaller font size for mobile */
+            }
+        }
     }
-
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-  }
-}
-
-.voor-wie-niet-container{
-  display: flex;
-  padding: 0px 60px 80px;
-  color: rgb(0, 0, 0);
-  background-color: #AAC9CB;
-
-  .voor-wie-niet-content{
-    padding-right: 20px;
-
-    h1 {
-      font-size: 3.5rem;
-      margin-bottom: 20px;
-      color: $primary-color;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-  }
 }
 
 .pill-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    @media (max-width: 768px) {
+        display: none;
+        justify-content: center; /* Center pills on mobile */
+    }
 }
 
 .pill {
-  background-color: #e5f4f6;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 14px;
-  display: inline-block;
-  white-space: nowrap;
-  border: 1px solid black;
+    background-color: #e5f4f6;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-block;
+    white-space: nowrap;
+    border: 1px solid black;
 
-  &.red{
-    background-color: #f6e5e5;
-  }
+    &.red {
+        background-color: #f6e5e5;
+    }
 }
 
+.text-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
 
-.text-container{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
+    @media (max-width: 768px) {
+        flex-direction: column; /* Stack content vertically on mobile */
+        gap: 40px; /* Add space between stacked items */
+    }
 }
 
-.sub-container{
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 
+    @media (max-width: 768px) {
+        width: 100%; /* Full width on mobile */
+    }
+}
