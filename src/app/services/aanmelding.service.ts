@@ -16,7 +16,7 @@ export class AanmeldingService {
   constructor(private http: HttpClient, private fb: FormBuilder) {
     this.aanmeldingForm = this.fb.group({
       name: ['', Validators.required],
-      address: ['', Validators.required],
+      // address: ['', Validators.required],
       dateOfBirth: ['', Validators.required],
       telephone: ['', [Validators.required, Validators.pattern(/^\+?[0-9]{10,}$/)]],
       email: ['', [Validators.required, Validators.email]],

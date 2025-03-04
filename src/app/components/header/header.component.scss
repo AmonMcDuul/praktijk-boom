@@ -17,6 +17,19 @@
         margin: 0; /* Remove default margin */
     }
 
+    /* Logo Container */
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 20px; /* Space between logos */
+        cursor: pointer;
+
+        .logo {
+            width: 60px; /* Adjust as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+    }
+
     .hamburger {
         display: none; /* Hidden by default */
         flex-direction: column;

@@ -1,5 +1,8 @@
 <div class="header-container">
-    <h1>Praktijk van der Boom</h1>
+    <div class="logo-container" [routerLink]="'/'">
+        <img class="logo" src="assets/img/pvdblogo.png" alt="logo">
+        <h1>Praktijk van der Boom</h1>
+    </div>
 
     <!-- Hamburger Menu Icon -->
     <div class="hamburger" (click)="toggleMenu()">
@@ -10,10 +13,10 @@
 
     <!-- Navigation -->
     <nav class="header-nav" [class.active]="isMenuOpen">
-        <a href="">Home</a>
-        <a href="/aanbod">Aanbod</a>
-        <a href="/about">Over mij</a>
-        <a href="/aanmelden">Aanmelden</a>
-        <a href="/contact">Contact</a>
+        <a [routerLink]="'/'">Home</a>
+        <a [routerLink]="'/aanbod'">Aanbod</a>
+        <a [routerLink]="'/about'">Over mij</a>
+        <a [routerLink]="'/aanmelden'">Aanmelden</a>
+        <a [routerLink]="'/contact'">Contact</a>
     </nav>
 </div>
