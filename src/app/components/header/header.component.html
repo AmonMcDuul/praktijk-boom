@@ -5,7 +5,7 @@
     </div>
 
     <!-- Hamburger Menu Icon -->
-    <div class="hamburger" (click)="toggleMenu()">
+    <div class="hamburger" [class.open]="isMenuOpen" (click)="toggleMenu()">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
