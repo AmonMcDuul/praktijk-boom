@@ -1,9 +1,12 @@
 @use '../../../styles.scss' as *;
 
 .container {
-    height: 70vh;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    min-height: calc(70vh); /* Adjust for header height */
+    background: linear-gradient(to right, #9d9d9d94 1%, rgba(0, 0, 0, 0)),
+    url('https://i.ibb.co/d0LHvdR/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background.jpg') right center no-repeat;
+    background-size: cover;
+    padding: 40px;
+
 
     @media (max-width: 768px) {
         height: auto; /* Adjust height for mobile */
@@ -11,8 +14,8 @@
 }
 
 .contact-container {
-    background-color: #fff8f2; /* Light background color */
-    color: #000000; /* Dark text color */
+    background-color: #ffffff; 
+    color: #000000;
     padding: 60px;
     border-radius: 12px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);

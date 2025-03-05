@@ -10,7 +10,7 @@
         justify-content: space-between;
         padding: 60px;
         position: relative;
-        background-color: #fff8f2;
+        background-color: #fffcfc;
 
         @media (max-width: 768px) {
             flex-direction: column; /* Stack content vertically on mobile */
@@ -33,6 +33,22 @@
 
             @media (max-width: 768px) {
                 font-size: 2.5rem; /* Smaller font size for mobile */
+            }
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            cursor: pointer;
+            
+            &:hover{
+                color: #00656c;
+            }
+            @media (max-width: 768px) {
+                font-size: 1.2rem; /* Smaller font size for mobile */
+                margin-top: 40px;
+                margin-bottom: 40px;
             }
         }
 
@@ -211,7 +227,7 @@
     display: flex;
     padding: 0px 60px 240px;
     color: rgb(0, 0, 0);
-    background-color: #fff8f2;
+    background-color: #fffcfc;
     position: relative;
 
     &::after {
@@ -253,6 +269,16 @@
 
             @media (max-width: 768px) {
                 font-size: 1.8rem; /* Smaller font size for mobile */
+            }
+        }
+
+        .aanmelden-click {
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-top: 40px;
+
+            &:hover{
+                color: #00656c;
             }
         }
 
@@ -327,16 +353,16 @@
 }
 
 .pill {
-    background-color: #e5f4f6;
+    background-color: #d4f8e7;
     padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 14px;
+    border-radius: 15px;
+    font-size: 16px;
     display: inline-block;
     white-space: nowrap;
-    border: 1px solid black;
+    border: 2px solid black;
 
     &.red {
-        background-color: #f6e5e5;
+        background-color: #f9d0d0;
     }
 }
 

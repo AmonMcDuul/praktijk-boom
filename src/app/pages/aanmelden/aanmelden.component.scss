@@ -2,7 +2,7 @@
   padding: 40px;
   min-height: calc(70vh); /* Adjust for header height */
   background-color: #e5f4f6;
-  background: linear-gradient(to right, #ffffff94 1%, rgba(0, 0, 0, 0)),
+  background: linear-gradient(to right, #9d9d9d94 1%, rgba(0, 0, 0, 0)),
               url('https://i.ibb.co/d0LHvdR/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background.jpg') right center no-repeat;
   background-size: cover;
 
@@ -15,7 +15,7 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background: #e5f4f6df;
+  background: #ffffffdf;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
@@ -64,7 +64,7 @@
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  background: #e5f4f6f4;
+  background: #ffffff;
 
   @media (max-width: 768px) {
     padding: 15px; /* Reduce padding for mobile */
