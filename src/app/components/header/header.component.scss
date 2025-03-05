@@ -124,7 +124,7 @@
             position: absolute;
             top: 100%; /* Position below the header */
             left: 0;
-            width: 80%;
+            width: 100vw;
             background: #00656c;
             padding: 20px;
             border-bottom: 2px solid darken(#00656c, 10%);
@@ -132,6 +132,7 @@
             opacity: 0; /* Start invisible */
             visibility: hidden; /* Start hidden */
             transition: opacity 0.3s ease, visibility 0.3s ease;
+            box-sizing: border-box; 
 
             &.active {
                 opacity: 1; /* Fade in */
