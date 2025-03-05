@@ -144,7 +144,7 @@
 
     .services-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         gap: 30px;
         justify-items: center;
         max-width: 1600px;
@@ -158,7 +158,7 @@
         .service-item {
             background-color: #e5f4f6;
             width: 100%;
-            max-width: 320px;
+            max-width: 370px;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);

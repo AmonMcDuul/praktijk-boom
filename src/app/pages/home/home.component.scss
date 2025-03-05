@@ -216,8 +216,11 @@
 
     .services-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         gap: 30px;
+        justify-items: center;
+        max-width: 1600px;
+        margin: 0 auto;
 
         @media (max-width: 768px) {
             grid-template-columns: 1fr; /* Stack items vertically on mobile */
@@ -226,6 +229,8 @@
 
         .service-item {
             background-color: #e5f4f6;
+            width: 100%;
+            max-width: 370px;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -238,10 +243,23 @@
                 margin-bottom: 15px;
             }
 
+            h4 {
+                font-size: 1.4rem;
+                margin-bottom: 10px;
+
+                @media (max-width: 768px) {
+                    font-size: 1.2rem; /* Smaller font size for mobile */
+                }
+            }
+
             p {
                 font-size: 1rem;
                 line-height: 1.5;
-                color: #000000;
+                color: #555;
+
+                @media (max-width: 768px) {
+                    font-size: 0.9rem; /* Smaller font size for mobile */
+                }
             }
 
             &:hover {
