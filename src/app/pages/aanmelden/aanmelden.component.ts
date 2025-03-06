@@ -2,17 +2,33 @@ import { Component, OnInit } from '@angular/core';
 import { AanmeldingService } from '../../services/aanmelding.service';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @Component({
   selector: 'app-aanmelden',
   templateUrl: './aanmelden.component.html',
   styleUrls: ['./aanmelden.component.scss'],
-  imports: [ReactiveFormsModule, CommonModule]
+  imports: [ReactiveFormsModule, 
+    CommonModule, 
+    MatInputModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatIconModule,
+  ]
 })
 export class AanmeldenComponent implements OnInit {
   behandelOptions: string[] = [];
   submissionSuccess: boolean | null = null;
-  currentWeekStart: Date = new Date();
   step$;
   aanmeldingForm: FormGroup;
 
@@ -25,28 +41,36 @@ export class AanmeldenComponent implements OnInit {
     this.behandelOptions = this.aanmeldingService.getBehandelOptions();
   }
 
-  // goToNextWeek(): void {
-  //   this.currentWeekStart.setDate(this.currentWeekStart.getDate() + 7);
-  // }
+  // Date filter to restrict selection to specific days
+  dateFilter = (date: Date | null): boolean => {
+    if (!date) return false;
+    const day = date.getDay();
+    return day === 1 || day === 3 || day === 4; // Monday, Wednesday, Thursday
+  };
 
-  // goToPreviousWeek(): void {
-  //   this.currentWeekStart.setDate(this.currentWeekStart.getDate() - 7);
-  // }
+  // Handle date selection
+  onDateSelected(date: Date | null): void {
+    if (date) {
+      this.aanmeldingForm.patchValue({ selectedDate: date });
+    } else {
+      this.aanmeldingForm.patchValue({ selectedDate: null });
+    }
+  }
 
   setStep(step: number): void {
-    this.aanmeldingService.setStep(step)
+    this.aanmeldingService.setStep(step);
   }
 
   previousStep(): void {
-    this.aanmeldingService.previousStep()
+    this.aanmeldingService.previousStep();
   }
 
   nextStep(): void {
-    this.aanmeldingService.nextStep()
+    this.aanmeldingService.nextStep();
   }
 
   getFullDate(): string {
-    return this.aanmeldingService.getFullDate()
+    return this.aanmeldingService.getFullDate();
   }
 
   submitAanmelding(): void {

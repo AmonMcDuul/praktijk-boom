@@ -1,13 +1,15 @@
 .main-container {
   padding: 40px;
-  min-height: calc(70vh); /* Adjust for header height */
+  min-height: calc(70vh);
   background-color: #e5f4f6;
   background: linear-gradient(to right, #9d9d9d94 1%, rgba(0, 0, 0, 0)),
               url('https://i.ibb.co/d0LHvdR/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background.jpg') right center no-repeat;
   background-size: cover;
+  background-attachment: fixed; /* Keep the background fixed */
+  background-position: right center; /* Align the background to the right */
 
   @media (max-width: 768px) {
-    padding: 20px; /* Reduce padding for mobile */
+    padding: 20px;
   }
 }
 
@@ -20,7 +22,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
   @media (max-width: 768px) {
-    padding: 15px; /* Reduce padding for mobile */
+    padding: 15px;
   }
 }
 
@@ -30,8 +32,8 @@
   margin-bottom: 20px;
 
   @media (max-width: 768px) {
-    flex-direction: column; /* Stack buttons vertically on mobile */
-    gap: 10px; /* Add space between buttons */
+    flex-direction: column;
+    gap: 10px;
   }
 
   button {
@@ -43,9 +45,9 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease;
-
+    color: black;
     @media (max-width: 768px) {
-      margin: 0; /* Remove horizontal margin on mobile */
+      margin: 0;
     }
 
     &.active {
@@ -67,131 +69,106 @@
   background: #ffffff;
 
   @media (max-width: 768px) {
-    padding: 15px; /* Reduce padding for mobile */
+    padding: 15px;
   }
 
   h2 {
     margin-bottom: 20px;
 
     @media (max-width: 768px) {
-      font-size: 1.5rem; /* Smaller font size for mobile */
+      font-size: 1.5rem;
     }
   }
 
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-
-  input,
-  select {
-    width: 96%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-
-    @media (max-width: 768px) {
-      width: 95%; /* Full width on mobile */
-    }
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   button {
-    padding: 10px 20px;
     margin-right: 10px;
-    border: none;
     border-radius: 5px;
-    background: #96babd;
-    color: white;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
+    color: black;
 
     @media (max-width: 768px) {
-      width: 100%; /* Full width on mobile */
-      margin: 5px 0; /* Add space between buttons */
-    }
-
-    &:hover {
-      background: #00656c;
-    }
-
-    &:disabled {
-      background: #cccccc;
-      cursor: not-allowed;
+      width: 100%;
+      margin: 5px 0;
     }
   }
 }
 
-select {
-  background-color: white;
-  color: black;
-}
-
-textarea {
-  resize: none;
-  width: 95%;
-  font-family: 'Arial', sans-serif;
-  font-size: 16px;
-
-  @media (max-width: 768px) {
-    width: 95%; /* Full width on mobile */
-  }
-}
-
-.day-selection button,
-.time-selection button,
-.week-selection button {
-  padding: 10px 15px;
-  margin: 5px;
-  border: none;
-  background: #96babd;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
-
-  @media (max-width: 768px) {
-    width: 100%; /* Full width on mobile */
-    margin: 5px 0; /* Add space between buttons */
-  }
-
-  &:hover {
-    background: #00656c;
-  }
-}
-
-.day-selection button.active,
-.time-selection button.active {
-  background: #00656c;
-  color: white;
-}
-
-.week-selection {
+.time-selection {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-bottom: 20px;
 
-  @media (max-width: 768px) {
-    flex-direction: column; /* Stack buttons vertically on mobile */
-    gap: 10px; /* Add space between buttons */
-  }
-
   button {
-    padding: 10px 15px;
+    flex: 1 1 calc(33.333% - 10px);
+    padding: 10px;
     border: none;
     background: #96babd;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease;
+    color: black;
 
     &:hover {
       background: #00656c;
     }
+
+    &.active {
+      background: #00656c;
+      color: white;
+    }
+  }
+}
+
+/* Calendar Container */
+.calendar-container {
+  display: flex;
+  justify-content: center; /* Center the calendar horizontally */
+  margin-bottom: 20px;
+}
+
+/* Make the calendar smaller and responsive */
+.mat-calendar {
+  width: 400px !important; // Default width for larger screens
+  height: auto !important;
+
+  .mat-calendar-table {
+    font-size: 12px; // Adjust the font size
   }
 
-  span {
-    font-weight: bold;
+  .mat-calendar-header {
+    padding: 8px !important; // Reduce header padding
+
+    .mat-calendar-period-button {
+      display: none; // Hide the year button
+    }
+
+    .mat-calendar-arrow {
+      display: none; // Hide the arrow
+    }
+  }
+
+  .mat-calendar-body-cell {
+    width: 30px !important; // Adjust cell size
+    height: 30px !important;
+  }
+
+  @media (max-width: 768px) {
+    width: 100% !important; // Full width on mobile
+    max-width: 300px; // Limit maximum width for smaller screens
+
+    .mat-calendar-table {
+      font-size: 10px; // Smaller font size for mobile
+    }
+
+    .mat-calendar-body-cell {
+      width: 25px !important; // Smaller cell size for mobile
+      height: 25px !important;
+    }
   }
 }

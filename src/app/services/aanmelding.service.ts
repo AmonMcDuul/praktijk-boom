@@ -16,45 +16,38 @@ export class AanmeldingService {
   constructor(private http: HttpClient, private fb: FormBuilder) {
     this.aanmeldingForm = this.fb.group({
       name: ['', Validators.required],
-      // address: ['', Validators.required],
       dateOfBirth: ['', Validators.required],
       telephone: ['', [Validators.required, Validators.pattern(/^\+?[0-9]{10,}$/)]],
       email: ['', [Validators.required, Validators.email]],
       behandeling: ['', Validators.required],
       opmerking: [''],
-      selectedWeek: [this.getCurrentWeek(), Validators.required],  // Default to current week
-      selectedDay: ['', Validators.required],
+      selectedDate: [null, Validators.required], // Add selectedDate to the form
       selectedTime: ['', Validators.required],
     });
   }
 
-  getCurrentWeek(): number {
-    const today = new Date();
-    const startOfYear = new Date(today.getFullYear(), 0, 1);
-    const pastDays = (today.getTime() - startOfYear.getTime()) / (24 * 60 * 60 * 1000);
-    return Math.ceil((pastDays + startOfYear.getDay() + 1) / 7);
-  }
-  
-  getStartDateOfWeek(weekNumber: number): Date {
-    const startOfYear = new Date(new Date().getFullYear(), 0, 1);
-    const daysOffset = (weekNumber - 1) * 7 - startOfYear.getDay();
-    return new Date(startOfYear.setDate(startOfYear.getDate() + daysOffset));
-  }
-  
+  // Get the full date in the desired format
   getFullDate(): string {
-    const selectedWeek = this.aanmeldingForm.value.selectedWeek;
-    const selectedDay = this.aanmeldingForm.value.selectedDay;
-    if (!selectedWeek || !selectedDay) return '';
-  
-    const startDate = this.getStartDateOfWeek(selectedWeek);
-    const daysMap: { [key: string]: number } = { Maandag: 1, Woensdag: 3, Donderdag: 4 };
-    const fullDate = new Date(startDate.setDate(startDate.getDate() + daysMap[selectedDay]));
-  
-    return fullDate.toLocaleDateString('nl-NL'); // Format as dd/mm/yyyy
+    const selectedDate = this.aanmeldingForm.value.selectedDate;
+    if (!selectedDate) return '';
+
+    return selectedDate.toLocaleDateString('nl-NL', {
+      day: '2-digit',
+      month: '2-digit',
+    }); // Format as dd/mm
   }
 
   getBehandelOptions(): string[] {
-    return ['EMDR enkelvoudig trauma', 'Cognitieve gedragstherapie', 'ADHD Diagnostiek en coaching', 'Wandelsessie', 'Oplossingsgerichte therapie', 'ACT', 'Kortdurende behandeling', 'Overig'];
+    return [
+      'EMDR enkelvoudig trauma',
+      'Cognitieve gedragstherapie',
+      'ADHD Diagnostiek en coaching',
+      'Wandelsessie',
+      'Oplossingsgerichte therapie',
+      'ACT',
+      'Kortdurende behandeling',
+      'Overig',
+    ];
   }
 
   checkAvailability(date: Date, time: string): Observable<boolean> {
