@@ -16,25 +16,44 @@
       @if ((step$ | async) === 1) {
         <h2>Persoonlijke gegevens</h2>
         <form [formGroup]="aanmeldingForm">
+          <mat-label>Naam</mat-label>
           <mat-form-field appearance="fill">
-            <mat-label>Naam</mat-label>
             <input matInput formControlName="name" required>
           </mat-form-field>
 
-          <mat-form-field appearance="fill">
-            <mat-label>Geboortedatum</mat-label>
-            <input matInput [matDatepicker]="dobPicker" formControlName="dateOfBirth" required>
-            <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
-            <mat-datepicker #dobPicker></mat-datepicker>
-          </mat-form-field>
+          <mat-label>Geboortedatum</mat-label>
+          <div class="date-select-container">
+            <mat-form-field appearance="fill">
+              <mat-label>Dag</mat-label>
+              <mat-select formControlName="day" required>
+                <mat-option *ngFor="let day of days" [value]="day">{{ day }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          
+            <mat-form-field appearance="fill">
+              <mat-label>Maand</mat-label>
+              <mat-select formControlName="month" required>
+                <mat-option *ngFor="let month of months; let i = index" [value]="i + 1">
+                  {{ month }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          
+            <mat-form-field appearance="fill">
+              <mat-label>Jaar</mat-label>
+              <mat-select formControlName="year" required>
+                <mat-option *ngFor="let year of years" [value]="year">{{ year }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
 
+          <mat-label>Telefoonnummer</mat-label>
           <mat-form-field appearance="fill">
-            <mat-label>Telefoonnummer</mat-label>
             <input matInput formControlName="telephone" required>
           </mat-form-field>
 
+          <mat-label>E-mail</mat-label>
           <mat-form-field appearance="fill">
-            <mat-label>E-mail</mat-label>
             <input matInput formControlName="email" type="email" required>
           </mat-form-field>
 
@@ -45,15 +64,15 @@
       @if ((step$ | async) === 2) {
         <h2>Behandeling</h2>
         <form [formGroup]="aanmeldingForm">
+          <mat-label>Behandeling</mat-label>
           <mat-form-field appearance="fill">
-            <mat-label>Behandeling</mat-label>
             <mat-select formControlName="behandeling" required>
               <mat-option *ngFor="let optie of behandelOptions" [value]="optie">{{ optie }}</mat-option>
             </mat-select>
           </mat-form-field>
 
+          <mat-label>Opmerking</mat-label>
           <mat-form-field appearance="fill">
-            <mat-label>Opmerking</mat-label>
             <textarea matInput formControlName="opmerking" rows="4"></textarea>
           </mat-form-field>
 

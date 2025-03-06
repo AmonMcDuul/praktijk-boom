@@ -172,3 +172,13 @@
     }
   }
 }
+
+.date-select-container {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+}
+/* Optional: Adjust the width of the select boxes */
+.mat-form-field {
+  flex: 1; /* Each field takes equal width */
+}
