@@ -30,7 +30,7 @@
 
     .hero-content {
         max-width: 50%;
-
+        z-index: 1000;
         @media (max-width: 768px) {
             max-width: 100%; /* Full width on mobile */
             text-align: center; /* Center text on mobile */
