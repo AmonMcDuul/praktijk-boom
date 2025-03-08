@@ -182,3 +182,7 @@
 .mat-form-field {
   flex: 1; /* Each field takes equal width */
 }
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: white !important;
+}
