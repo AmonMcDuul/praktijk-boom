@@ -56,8 +56,15 @@ export class AanmeldenComponent implements OnInit {
   // Date filter to restrict selection to specific days
   dateFilter = (date: Date | null): boolean => {
     if (!date) return false;
+
+    //date not in the past
+    const currentDate = new Date();
+    currentDate.setHours(0, 0, 0, 0);
+    if (date < currentDate) return false;
+
+    // Monday, Wednesday, Thursday
     const day = date.getDay();
-    return day === 1 || day === 3 || day === 4; // Monday, Wednesday, Thursday
+    return day === 1 || day === 3 || day === 4; 
   };
 
   // Handle date selection
