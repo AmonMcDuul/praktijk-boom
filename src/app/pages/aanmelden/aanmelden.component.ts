@@ -60,7 +60,7 @@ export class AanmeldenComponent implements OnInit {
     //date not in the past
     const currentDate = new Date();
     currentDate.setHours(0, 0, 0, 0);
-    if (date < currentDate) return false;
+    if (date <= currentDate) return false;
 
     // Monday, Wednesday, Thursday
     const day = date.getDay();
