@@ -20,4 +20,29 @@
         <loc>https://praktijkvanderboom.nl/contact</loc>
         <priority>0.6</priority>
     </url>
+
+    <url>
+        <loc>https://praktijkvanderboom.nl/aanbod/emdr-enkelvoudig-trauma</loc>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://praktijkvanderboom.nl/aanbod/cognitieve-gedragstherapie</loc>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://praktijkvanderboom.nl/aanbod/adhd-diagnostiek-en-coaching</loc>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://praktijkvanderboom.nl/aanbod/wandelsessies</loc>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://praktijkvanderboom.nl/aanbod/act-acceptance-and-commitment-therapy</loc>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://praktijkvanderboom.nl/aanbod/supervisie-gz-opleiding</loc>
+        <priority>0.7</priority>
+    </url>
 </urlset>
