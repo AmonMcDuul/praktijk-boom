@@ -1,5 +1,4 @@
 @use '../../../styles.scss' as *;
-
 .services {
     padding: 0;
     background-color: #AAC9CB;
@@ -13,18 +12,18 @@
         background-color: #fffcfc;
 
         @media (max-width: 768px) {
-            flex-direction: column; /* Stack content vertically on mobile */
-            padding: 40px 20px; /* Reduce padding for mobile */
+            flex-direction: column;
+            padding: 40px 20px;
         }
     }
 
     .services-text {
-        width: 55%; /* Adjust text width */
+        width: 55%;
         text-align: left;
 
         @media (max-width: 768px) {
-            width: 100%; /* Full width on mobile */
-            text-align: center; /* Center text on mobile */
+            width: 100%;
+            text-align: center;
         }
 
         h2 {
@@ -32,7 +31,7 @@
             margin-bottom: 20px;
 
             @media (max-width: 768px) {
-                font-size: 2.5rem; /* Smaller font size for mobile */
+                font-size: 2.5rem;
             }
         }
 
@@ -41,12 +40,13 @@
             margin-top: 60px;
             margin-bottom: 60px;
             cursor: pointer;
-            
-            &:hover{
+
+            &:hover {
                 color: #00656c;
             }
+
             @media (max-width: 768px) {
-                font-size: 1.2rem; /* Smaller font size for mobile */
+                font-size: 1.2rem;
                 margin-top: 40px;
                 margin-bottom: 40px;
             }
@@ -57,18 +57,18 @@
             line-height: 1.6;
 
             @media (max-width: 768px) {
-                font-size: 1rem; /* Smaller font size for mobile */
+                font-size: 1rem;
             }
         }
     }
 
     .services-image {
-        width: 40%; /* Adjust image width */
+        width: 40%;
 
         @media (max-width: 768px) {
-            width: 100%; /* Full width on mobile */
-            margin-top: 40px; /* Add space between text and image */
-            text-align: center; /* Center image on mobile */
+            width: 100%;
+            margin-top: 40px;
+            text-align: center;
         }
 
         img {
@@ -79,7 +79,7 @@
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 
             @media (max-width: 768px) {
-                width: 80%; /* Adjust image size for mobile */
+                width: 80%;
             }
         }
     }
@@ -88,7 +88,7 @@
         padding: 60px 20px;
 
         @media (max-width: 768px) {
-            padding: 40px 20px; /* Reduce padding for mobile */
+            padding: 40px 20px;
         }
 
         h3 {
@@ -97,25 +97,15 @@
             margin-bottom: 60px;
             cursor: pointer;
             text-align: center;
-                
-            &:hover{
+
+            &:hover {
                 color: #00656c;
             }
+
             @media (max-width: 768px) {
-                font-size: 1.2rem; /* Kleinere lettergrootte voor mobiel */
+                font-size: 1.2rem;
                 margin-top: 40px;
                 margin-bottom: 40px;
-            }
-        }
-
-        .therapy-description {
-            text-align: center;
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 40px auto;
-
-            @media (max-width: 768px) {
-                font-size: 1rem; /* Smaller font size for mobile */
             }
         }
 
@@ -123,7 +113,7 @@
             padding-top: 140px;
 
             @media (max-width: 768px) {
-                padding-top: 80px; /* Adjust padding for mobile */
+                padding-top: 80px;
             }
         }
 
@@ -143,7 +133,7 @@
             }
 
             @media (max-width: 768px) {
-                padding-bottom: 100px; /* Adjust padding for mobile */
+                padding-bottom: 100px;
             }
         }
     }
@@ -157,8 +147,8 @@
         margin: 0 auto;
 
         @media (max-width: 768px) {
-            grid-template-columns: 1fr; /* Stack items vertically on mobile */
-            gap: 20px; /* Reduce gap for mobile */
+            grid-template-columns: 1fr;
+            gap: 20px;
         }
 
         .service-item {
@@ -183,7 +173,7 @@
                 margin-bottom: 10px;
 
                 @media (max-width: 768px) {
-                    font-size: 1.2rem; /* Smaller font size for mobile */
+                    font-size: 1.2rem;
                 }
             }
 
@@ -193,7 +183,7 @@
                 color: #555;
 
                 @media (max-width: 768px) {
-                    font-size: 0.9rem; /* Smaller font size for mobile */
+                    font-size: 0.9rem;
                 }
             }
 
@@ -207,32 +197,11 @@
             }
         }
     }
-
-    .small-container {
-        display: flex;
-        justify-content: center;
-
-        @media (max-width: 768px) {
-            flex-direction: column; /* Stack items vertically on mobile */
-            align-items: center; /* Center items on mobile */
-        }
-
-        .small {
-            padding: 20px 0px;
-            min-width: 100px;
-            font-weight: bold;
-
-            @media (max-width: 768px) {
-                min-width: 60%; /* Full width on mobile */
-                margin-bottom: 20px; /* Add space between items */
-            }
-        }
-    }
 }
 
 .voor-wie-container {
     display: flex;
-    padding: 0px 60px 240px;
+    padding: 0 60px 240px;
     color: rgb(0, 0, 0);
     background-color: #fffcfc;
     position: relative;
@@ -249,33 +218,17 @@
     }
 
     @media (max-width: 768px) {
-        flex-direction: column; /* Stack content vertically on mobile */
-        padding: 40px 20px 150px; /* Reduce padding for mobile */
+        flex-direction: column;
+        padding: 40px 20px 150px;
     }
 
     .voor-wie-content {
-        padding-right: 20px;
-
-        @media (max-width: 768px) {
-            padding-right: 0; /* Remove padding for mobile */
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            color: $primary-color;
-
-            @media (max-width: 768px) {
-                font-size: 2.5rem; /* Smaller font size for mobile */
-            }
-        }
-
         h2 {
             font-size: 2rem;
             margin-bottom: 20px;
 
             @media (max-width: 768px) {
-                font-size: 1.8rem; /* Smaller font size for mobile */
+                font-size: 1.8rem;
             }
         }
 
@@ -284,7 +237,7 @@
             cursor: pointer;
             margin-top: 40px;
 
-            &:hover{
+            &:hover {
                 color: #00656c;
             }
         }
@@ -294,7 +247,7 @@
             line-height: 1.6;
 
             @media (max-width: 768px) {
-                font-size: 1rem; /* Smaller font size for mobile */
+                font-size: 1rem;
             }
         }
     }
@@ -302,38 +255,22 @@
 
 .voor-wie-niet-container {
     display: flex;
-    padding: 0px 60px 80px;
+    padding: 0 60px 80px;
     color: rgb(0, 0, 0);
     background-color: #AAC9CB;
 
     @media (max-width: 768px) {
-        flex-direction: column; /* Stack content vertically on mobile */
-        padding: 40px 20px; /* Reduce padding for mobile */
+        flex-direction: column;
+        padding: 40px 20px;
     }
 
     .voor-wie-niet-content {
-        padding-right: 20px;
-
-        @media (max-width: 768px) {
-            padding-right: 0; /* Remove padding for mobile */
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            color: $primary-color;
-
-            @media (max-width: 768px) {
-                font-size: 2.5rem; /* Smaller font size for mobile */
-            }
-        }
-
         h2 {
             font-size: 2rem;
             margin-bottom: 20px;
 
             @media (max-width: 768px) {
-                font-size: 1.8rem; /* Smaller font size for mobile */
+                font-size: 1.8rem;
             }
         }
 
@@ -342,7 +279,7 @@
             line-height: 1.6;
 
             @media (max-width: 768px) {
-                font-size: 1rem; /* Smaller font size for mobile */
+                font-size: 1rem;
             }
         }
     }
@@ -354,8 +291,7 @@
     gap: 10px;
 
     @media (max-width: 768px) {
-        display: none;
-        justify-content: center; /* Center pills on mobile */
+        justify-content: center;
     }
 }
 
@@ -380,8 +316,8 @@
     gap: 20px;
 
     @media (max-width: 768px) {
-        flex-direction: column; /* Stack content vertically on mobile */
-        gap: 40px; /* Add space between stacked items */
+        flex-direction: column;
+        gap: 40px;
     }
 }
 
@@ -391,7 +327,7 @@
     width: 50%;
 
     @media (max-width: 768px) {
-        width: 100%; /* Full width on mobile */
+        width: 100%;
     }
 }
 
@@ -400,13 +336,14 @@
     margin-top: 80px;
     margin-bottom: -60px;
     cursor: pointer;
-    
-    &:hover{
+
+    &:hover {
         color: #00656c;
     }
+
     @media (max-width: 768px) {
-        font-size: 1.2rem; /* Kleinere lettergrootte voor mobiel */
+        font-size: 1.2rem;
         margin-top: 40px;
         margin-bottom: 40px;
     }
-  }
+}

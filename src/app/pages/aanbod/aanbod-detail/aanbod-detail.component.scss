@@ -1,5 +1,4 @@
 @use '../../../../styles.scss' as *;
-
 .treatment-detail-container {
   padding: 60px;
   background-color: #fffcfc;
@@ -61,7 +60,7 @@
       flex-wrap: wrap;
       gap: 40px;
       margin-bottom: 40px;
-    
+
       a {
         text-decoration: none;
         font-size: 1.2rem;
@@ -69,11 +68,11 @@
         position: relative;
         cursor: pointer;
         transition: color 0.3s ease;
-    
+
         &:hover {
           color: #00656c;
         }
-    
+
         &:after {
           content: '';
           display: block;
@@ -85,12 +84,12 @@
           bottom: -6px;
           left: 0;
         }
-    
+
         &:hover:after,
         &.active:after {
           width: 100%;
         }
-    
+
         @media (max-width: 768px) {
           font-size: 1rem;
           gap: 20px;
@@ -120,11 +119,12 @@
   padding-top: 20px;
   padding-bottom: 20px;
   cursor: pointer;
-  
-  &:hover{
-      color: #00656c;
+
+  &:hover {
+    color: #00656c;
   }
+
   @media (max-width: 768px) {
-      font-size: 1.2rem; /* Kleinere lettergrootte voor mobiel */
+    font-size: 1.2rem;
   }
 }
