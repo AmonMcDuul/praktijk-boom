@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AanmeldingService {
   private apiUrl = 'https://localhost';
-  private stepSubject = new BehaviorSubject<number>(1);
+  private stepSubject = new BehaviorSubject<number>(0);
   step$ = this.stepSubject.asObservable();
   aanmeldingForm: FormGroup;
 
@@ -39,14 +39,7 @@ export class AanmeldingService {
 
   getBehandelOptions(): string[] {
     return [
-      'EMDR enkelvoudig trauma',
-      'Cognitieve gedragstherapie',
-      'ADHD Diagnostiek en coaching',
-      'Wandelsessie',
-      'Oplossingsgerichte therapie',
-      'ACT',
-      'Kortdurende behandeling',
-      'Overig',
+      'Telefonisch pre-intake',
     ];
   }
 
@@ -71,7 +64,7 @@ export class AanmeldingService {
 
   previousStep(): void {
     const currentStep = this.stepSubject.value;
-    if (currentStep > 1) {
+    if (currentStep >= 1) {
       this.stepSubject.next(currentStep - 1);
     }
   }
