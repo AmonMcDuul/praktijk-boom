@@ -1,18 +1,32 @@
 <div class="main-container">
   <div class="wizard">
     <div class="step-indicators">
+      <button mat-raised-button [class.active]="(step$ | async) === 0" (click)="setStep(0)">
+        Pre-intake
+      </button>
       <button mat-raised-button [class.active]="(step$ | async) === 1" (click)="setStep(1)">
         Gegevens
       </button>
-      <button mat-raised-button [class.active]="(step$ | async) === 2" (click)="setStep(2)">
+      <!-- <button mat-raised-button [class.active]="(step$ | async) === 2" (click)="setStep(2)">
         Behandeling
-      </button>
-      <button mat-raised-button [class.active]="(step$ | async) === 3" (click)="setStep(3)">
+      </button> -->
+      <button mat-raised-button [class.active]="(step$ | async) === 2" (click)="setStep(2)">
         Datum & tijd
       </button>
     </div>
 
     <div class="step-content">
+      @if ((step$ | async) === 0) {
+        <h2>Telefonische pre-intake</h2>
+        <p>
+          Voordat we een officieel intakegesprek inplannen, vindt er eerst een telefonische pre-intake plaats. <br><br>
+          Dit gesprek duurt ongeveer 10-15 minuten en heeft als doel om elkaar kort te leren kennen, jouw situatie te bespreken en te bepalen of ik de juiste persoon ben om je verder te helpen. <br><br>
+          Zo zorgen we ervoor dat het intakegesprek efficiënt en gericht verloopt. <br><br>
+          Vul het formulier in, dan neem ik op de gekozen datum en tijd contact met je op.<br><br>
+        </p>
+        <button mat-raised-button color="primary" (click)="nextStep()">Volgende</button>
+      }
+
       @if ((step$ | async) === 1) {
         <h2>Persoonlijke gegevens</h2>
         <form [formGroup]="aanmeldingForm">
@@ -57,11 +71,17 @@
             <input matInput formControlName="email" type="email" required>
           </mat-form-field>
 
+          <mat-label>Opmerking</mat-label>
+          <mat-form-field appearance="fill">
+            <textarea matInput formControlName="opmerking" rows="4"></textarea>
+          </mat-form-field>
+
+          <button mat-raised-button (click)="previousStep()">Terug</button>
           <button mat-raised-button color="primary" (click)="nextStep()">Volgende</button>
         </form>
       }
 
-      @if ((step$ | async) === 2) {
+      <!-- @if ((step$ | async) === 2) {
         <h2>Behandeling</h2>
         <form [formGroup]="aanmeldingForm">
           <mat-label>Behandeling</mat-label>
@@ -79,9 +99,9 @@
           <button mat-raised-button (click)="previousStep()">Terug</button>
           <button mat-raised-button color="primary" (click)="nextStep()">Volgende</button>
         </form>
-      }
+      } -->
 
-      @if ((step$ | async) === 3) {
+      @if ((step$ | async) === 2) {
         <h2>Datum en tijd</h2>
         <form [formGroup]="aanmeldingForm">
           <div class="calendar-container">
