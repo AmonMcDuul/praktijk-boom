@@ -92,13 +92,19 @@
         }
 
         h3 {
-            font-size: 2.2rem;
-            color: $primary-color;
+            font-size: 1.4rem;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            cursor: pointer;
             text-align: center;
-            margin-bottom: 20px;
-
+                
+            &:hover{
+                color: #00656c;
+            }
             @media (max-width: 768px) {
-                font-size: 2rem; /* Smaller font size for mobile */
+                font-size: 1.2rem; /* Kleinere lettergrootte voor mobiel */
+                margin-top: 40px;
+                margin-bottom: 40px;
             }
         }
 
@@ -122,7 +128,7 @@
         }
 
         &.individual-therapy {
-            padding-bottom: 280px;
+            padding-bottom: 120px;
             position: relative;
 
             &::after {
@@ -137,7 +143,7 @@
             }
 
             @media (max-width: 768px) {
-                padding-bottom: 200px; /* Adjust padding for mobile */
+                padding-bottom: 100px; /* Adjust padding for mobile */
             }
         }
     }
@@ -164,6 +170,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: all 0.3s ease-in-out;
+            cursor: pointer;
 
             i {
                 font-size: 2.5rem;
@@ -387,3 +394,19 @@
         width: 100%; /* Full width on mobile */
     }
 }
+
+.details-link {
+    font-size: 1.4rem;
+    margin-top: 80px;
+    margin-bottom: -60px;
+    cursor: pointer;
+    
+    &:hover{
+        color: #00656c;
+    }
+    @media (max-width: 768px) {
+        font-size: 1.2rem; /* Kleinere lettergrootte voor mobiel */
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+  }

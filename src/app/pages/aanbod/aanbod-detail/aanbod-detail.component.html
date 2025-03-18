@@ -1,5 +1,32 @@
 <div class="treatment-detail-container">
-    <div *ngIf="treatment" class="treatment-content">
+        
+  <div *ngIf="treatment" class="treatment-content">
+    <div class="treatment-navigation">
+      <a 
+        (click)="navigateToTreatmentDetail('emdr-enkelvoudig-trauma')"
+        [class.active]="isActive('emdr-enkelvoudig-trauma')"
+      >EMDR</a>
+      <a 
+        (click)="navigateToTreatmentDetail('cognitieve-gedragstherapie')"
+        [class.active]="isActive('cognitieve-gedragstherapie')"
+      >CGT</a>
+      <a 
+        (click)="navigateToTreatmentDetail('adhd-diagnostiek-en-coaching')"
+        [class.active]="isActive('adhd-diagnostiek-en-coaching')"
+      >ADHD</a>
+      <a 
+        (click)="navigateToTreatmentDetail('wandelsessies')"
+        [class.active]="isActive('wandelsessies')"
+      >Wandelen</a>
+      <a 
+        (click)="navigateToTreatmentDetail('act-acceptance-and-commitment-therapy')"
+        [class.active]="isActive('act-acceptance-and-commitment-therapy')"
+      >ACT</a>
+      <a 
+        (click)="navigateToTreatmentDetail('supervisie-gz-opleiding')"
+        [class.active]="isActive('supervisie-gz-opleiding')"
+      >Supervisie</a>
+    </div>
       <!-- Titel en korte beschrijving -->
       <h2>{{ treatment.name }}</h2>
       <p class="intro">{{ treatment.intro }}</p>
@@ -15,11 +42,9 @@
         <h3>Wat kun je verwachten?</h3>
         <p>{{ treatment.expectations }}</p>
   
-        <h3>Duur en frequentie</h3>
-        <p>{{ treatment.duration }}</p>
       </div>
-  
-      <!-- Terugknop (optioneel) -->
-      <button class="back-button" (click)="goBack()">Terug naar overzicht</button>
+
+      <h3 class="aanmeld-link" [routerLink]="'/aanmelden'">Jezelf aanmelden? Klik dan hier</h3>
+      <button class="back-button" (click)="goBack()">Terug naar aanbod</button>
     </div>
   </div>

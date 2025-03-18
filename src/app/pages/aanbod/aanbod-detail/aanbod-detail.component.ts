@@ -1,19 +1,18 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { AanbodDetailService } from '../../../services/aanbod-detail.service';
 import { CommonModule, Location } from '@angular/common';
 
 @Component({
   selector: 'app-aanbod-detail',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './aanbod-detail.component.html',
   styleUrl: './aanbod-detail.component.scss'
 })
 export class AanbodDetailComponent {
   treatment: any;
 
-  constructor(private route: ActivatedRoute, private aanbodDetailService: AanbodDetailService, private location: Location) {
-
+  constructor(private router: Router, private route: ActivatedRoute, private aanbodDetailService: AanbodDetailService) {
   }
 
   ngOnInit() {
@@ -23,7 +22,15 @@ export class AanbodDetailComponent {
     });
   }
   
+  navigateToTreatmentDetail(treatmentName: string) {
+    this.router.navigate(['/aanbod', treatmentName]);
+  }
+
+  isActive(treatmentName: string): boolean {
+    return this.route.snapshot.url[1]?.path === treatmentName;
+  }
+  
   goBack(): void {
-    this.location.back();
+    this.router.navigate(['/aanbod']);
   }
 }
