@@ -115,3 +115,16 @@
   }
 }
 
+.aanmeld-link {
+  font-size: 1.4rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+  
+  &:hover{
+      color: #00656c;
+  }
+  @media (max-width: 768px) {
+      font-size: 1.2rem; /* Kleinere lettergrootte voor mobiel */
+  }
+}
