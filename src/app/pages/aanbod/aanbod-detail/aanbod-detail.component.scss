@@ -1,0 +1,75 @@
+@use '../../../../styles.scss' as *;
+
+.treatment-detail-container {
+  padding: 60px;
+  background-color: #fffcfc;
+  color: #333;
+
+  @media (max-width: 768px) {
+    padding: 40px 20px;
+  }
+
+  .treatment-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2.5rem;
+      color: $primary-color;
+      margin-bottom: 20px;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    .intro {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 40px;
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+
+    .details {
+      h3 {
+        font-size: 1.8rem;
+        color: $primary-color;
+        margin-top: 30px;
+        margin-bottom: 15px;
+
+        @media (max-width: 768px) {
+          font-size: 1.5rem;
+        }
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+
+        @media (max-width: 768px) {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .back-button {
+      background-color: $primary-color;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-top: 40px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}
