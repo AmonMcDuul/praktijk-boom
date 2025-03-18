@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-aanbod',
@@ -9,4 +9,9 @@ import { RouterLink } from '@angular/router';
 })
 export class AanbodComponent {
 
+  constructor(private router: Router){}
+
+  navigateToTreatmentDetail(treatmentName: string) {
+    this.router.navigate(['/aanbod', treatmentName]);
+  }
 }
