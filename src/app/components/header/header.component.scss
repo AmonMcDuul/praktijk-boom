@@ -6,32 +6,31 @@
     color: #f3f3f3;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Align items to the sides */
+    justify-content: space-between;
     padding: 0 60px;
     overflow: hidden;
     position: relative;
     z-index: 1000;
 
     h1 {
-        font-size: 1.8rem; /* Adjust as needed */
-        margin: 0; /* Remove default margin */
+        font-size: 1.8rem;
+        margin: 0;
     }
 
-    /* Logo Container */
     .logo-container {
         display: flex;
         align-items: center;
-        gap: 20px; /* Space between logos */
+        gap: 20px;
         cursor: pointer;
 
         .logo {
-            width: 60px; /* Adjust as needed */
-            height: auto; /* Maintain aspect ratio */
+            width: 60px;
+            height: auto;
         }
     }
 
     .hamburger {
-        display: none; /* Hidden by default */
+        display: none;
         flex-direction: column;
         gap: 5px;
         cursor: pointer;
@@ -42,12 +41,12 @@
             background: #f3f3f3;
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
-        /* When menu is open, turn bars into an X */
+
         &.open {
             .bar:nth-child(1) {
                 transform: translateY(8px) rotate(45deg);
             }
-            
+
             .bar:nth-child(2) {
                 opacity: 0;
             }
@@ -97,46 +96,43 @@
 @media (max-width: 1100px) {
     .header-container {
         h1 {
-            font-size: 1.6rem; /* Adjust as needed */
-            margin: 0; /* Remove default margin */
+            font-size: 1.6rem;
         }
     }
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .header-container {
-        padding: 0 20px; /* Reduce padding for mobile */
+        padding: 0 20px;
         overflow: visible;
 
         h1 {
-            font-size: 1.2rem; /* Adjust as needed */
-            margin: 0; /* Remove default margin */
+            font-size: 1.2rem;
         }
-    
+
         .hamburger {
-            display: flex; /* Show hamburger menu on mobile */
+            display: flex;
         }
 
         .header-nav {
-            display: flex; /* Always flex for transition */
+            display: flex;
             flex-direction: column;
             position: absolute;
-            top: 100%; /* Position below the header */
+            top: 100%;
             left: 0;
             width: 100vw;
             background: #00656c;
             padding: 20px;
-            border-bottom: 2px solid darken(#00656c, 10%);
+            border-bottom: 1px solid black;
             z-index: 1001;
-            opacity: 0; /* Start invisible */
-            visibility: hidden; /* Start hidden */
+            opacity: 0;
+            visibility: hidden;
             transition: opacity 0.3s ease, visibility 0.3s ease;
-            box-sizing: border-box; 
+            box-sizing: border-box;
 
             &.active {
-                opacity: 1; /* Fade in */
-                visibility: visible; /* Make visible */
+                opacity: 1;
+                visibility: visible;
             }
 
             a {

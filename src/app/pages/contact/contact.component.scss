@@ -1,5 +1,4 @@
 @use '../../../styles.scss' as *;
-
 .container {
     padding: 40px;
     min-height: calc(70vh);
@@ -15,7 +14,7 @@
 }
 
 .contact-container {
-    background-color: #ffffff; 
+    background-color: #ffffff;
     color: #000000;
     padding: 60px;
     border-radius: 12px;
@@ -25,26 +24,26 @@
     text-align: center;
 
     @media (max-width: 768px) {
-        padding: 40px 20px; /* Reduce padding for mobile */
+        padding: 40px 20px;
     }
 
     h1 {
         font-size: 2.5rem;
-        color: #00656c; /* Primary color */
+        color: #00656c;
         margin-bottom: 10px;
 
         @media (max-width: 768px) {
-            font-size: 2rem; /* Smaller font size for mobile */
+            font-size: 2rem;
         }
     }
 
     .subtitle {
         font-size: 1.1rem;
-        color: #555; /* Subdued text color */
+        color: #555;
         margin-bottom: 30px;
 
         @media (max-width: 768px) {
-            font-size: 1rem; /* Smaller font size for mobile */
+            font-size: 1rem;
         }
     }
 
@@ -52,25 +51,25 @@
         width: 95%;
         padding: 15px;
         border-radius: 8px;
-        border: 2px solid rgba(#00656c, 0.3); /* Primary color with transparency */
+        border: 2px solid rgba(#00656c, 0.3);
         background: rgba(255, 255, 255, 0.1);
-        color: #000000; /* Dark text color */
+        color: #000000;
         resize: none;
         margin-bottom: 20px;
         font-family: inherit;
         transition: border-color 0.3s ease;
 
         @media (max-width: 768px) {
-            width: 90%; /* Full width on mobile */
+            width: 90%;
         }
 
         &:focus {
-            border-color: #00656c; /* Primary color */
+            border-color: #00656c;
             outline: none;
         }
 
         &::placeholder {
-            color: rgba(#000000, 0.6); /* Dark text color with transparency */
+            color: rgba(#000000, 0.6);
         }
     }
 
@@ -81,25 +80,25 @@
         margin-bottom: 20px;
 
         @media (max-width: 768px) {
-            grid-template-columns: 1fr; /* Stack inputs vertically on mobile */
+            grid-template-columns: 1fr;
         }
 
         input {
             padding: 12px;
             border-radius: 8px;
-            border: 2px solid rgba(#00656c, 0.3); /* Primary color with transparency */
+            border: 2px solid rgba(#00656c, 0.3);
             background: rgba(255, 255, 255, 0.1);
-            color: #000000; /* Dark text color */
+            color: #000000;
             font-family: inherit;
             transition: border-color 0.3s ease;
 
             &:focus {
-                border-color: #00656c; /* Primary color */
+                border-color: #00656c;
                 outline: none;
             }
 
             &::placeholder {
-                color: rgba(#000000, 0.6); /* Dark text color with transparency */
+                color: rgba(#000000, 0.6);
             }
         }
     }
@@ -107,7 +106,7 @@
     button {
         padding: 12px 30px;
         border-radius: 8px;
-        background: #00656c; /* Primary color */
+        background: #96babd;
         color: white;
         border: none;
         font-size: 1rem;
@@ -115,16 +114,16 @@
         transition: background 0.3s ease, transform 0.3s ease;
 
         @media (max-width: 768px) {
-            width: 100%; /* Full width on mobile */
+            width: 100%;
         }
 
         &:hover {
-            background: darken(#00656c, 10%); /* Darker primary color */
+            background: #00656c;
             transform: translateY(-2px);
         }
 
         &:disabled {
-            background: rgba(#00656c, 0.5); /* Primary color with transparency */
+            background: rgba(#00656c, 0.5);
             cursor: not-allowed;
         }
 
@@ -136,18 +135,18 @@
     .confirmation-msg {
         margin-top: 20px;
         font-size: 1.1rem;
-        color: #7BA05B; /* Accent color */
+        color: #7BA05B;
         font-weight: bold;
 
         @media (max-width: 768px) {
-            font-size: 1rem; /* Smaller font size for mobile */
+            font-size: 1rem;
         }
     }
 }
 
 .invalid-input {
-    border: 2px solid #fd8f87 !important; /* Error color */
-    animation: shake 0.5s ease-in-out; /* Optional: Add a shake animation for emphasis */
+    border: 2px solid #fd8f87 !important;
+    animation: shake 0.5s ease-in-out;
 }
 
 @keyframes shake {

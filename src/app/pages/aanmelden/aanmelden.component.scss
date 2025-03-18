@@ -5,8 +5,8 @@
   background: linear-gradient(to right, #9d9d9d94 1%, rgba(0, 0, 0, 0)),
               url('https://i.ibb.co/d0LHvdR/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background.jpg') right center no-repeat;
   background-size: cover;
-  background-attachment: fixed; /* Keep the background fixed */
-  background-position: right center; /* Align the background to the right */
+  background-attachment: fixed;
+  background-position: right center;
 
   @media (max-width: 768px) {
     padding: 20px;
@@ -46,6 +46,7 @@
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease;
     color: black;
+
     @media (max-width: 768px) {
       margin: 0;
     }
@@ -128,46 +129,46 @@
 /* Calendar Container */
 .calendar-container {
   display: flex;
-  justify-content: center; /* Center the calendar horizontally */
+  justify-content: center;
   margin-bottom: 20px;
 }
 
 /* Make the calendar smaller and responsive */
 .mat-calendar {
-  width: 400px !important; // Default width for larger screens
+  width: 400px !important;
   height: auto !important;
 
   .mat-calendar-table {
-    font-size: 12px; // Adjust the font size
+    font-size: 12px;
   }
 
   .mat-calendar-header {
-    padding: 8px !important; // Reduce header padding
+    padding: 8px !important;
 
     .mat-calendar-period-button {
-      display: none; // Hide the year button
+      display: none;
     }
 
     .mat-calendar-arrow {
-      display: none; // Hide the arrow
+      display: none;
     }
   }
 
   .mat-calendar-body-cell {
-    width: 30px !important; // Adjust cell size
+    width: 30px !important;
     height: 30px !important;
   }
 
   @media (max-width: 768px) {
-    width: 100% !important; // Full width on mobile
-    max-width: 300px; // Limit maximum width for smaller screens
+    width: 100% !important;
+    max-width: 300px;
 
     .mat-calendar-table {
-      font-size: 10px; // Smaller font size for mobile
+      font-size: 10px;
     }
 
     .mat-calendar-body-cell {
-      width: 25px !important; // Smaller cell size for mobile
+      width: 25px !important;
       height: 25px !important;
     }
   }
@@ -178,9 +179,10 @@
   gap: 16px;
   align-items: flex-end;
 }
+
 /* Optional: Adjust the width of the select boxes */
 .mat-form-field {
-  flex: 1; /* Each field takes equal width */
+  flex: 1;
 }
 
 ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
