@@ -115,7 +115,7 @@
           <div class="time-selection">
             <button
               mat-raised-button
-              *ngFor="let time of ['09:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00']"
+              *ngFor="let time of ['tussen 08:00 en 09:00', 'tussen 13:00 en 14:00', 'tussen 17:00 en 18:00']"
               [class.active]="aanmeldingForm.value.selectedTime === time"
               (click)="aanmeldingForm.patchValue({ selectedTime: time })"
             >
