@@ -21,7 +21,7 @@ export class AanmeldingService {
       email: ['', [Validators.required, Validators.email]],
       behandeling: ['', Validators.required],
       opmerking: [''],
-      selectedDate: [null, Validators.required], // Add selectedDate to the form
+      selectedDate: [null, Validators.required], 
       selectedTime: ['', Validators.required],
     });
   }
