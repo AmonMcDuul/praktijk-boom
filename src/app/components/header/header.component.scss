@@ -39,7 +39,7 @@
         .bar {
             width: 25px;
             height: 3px;
-            background: #f3f3f3;
+            background: black;
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
@@ -124,7 +124,7 @@
             top: 100%;
             left: 0;
             width: 100vw;
-            background: #00656c;
+            background-color: #fffcfc;
             padding: 20px;
             border-bottom: 1px solid black;
             z-index: 1001;
