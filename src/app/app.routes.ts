@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AanmeldenComponent } from './pages/aanmelden/aanmelden.component';
 import { VerwijzersComponent } from './pages/verwijzers/verwijzers.component';
 import { AanbodDetailComponent } from './pages/aanbod/aanbod-detail/aanbod-detail.component';
+import { AanbodDetailResolver } from './util/aanbod-detail.resolver';
 
 export const routes: Routes = [
     {
@@ -41,6 +42,7 @@ export const routes: Routes = [
       {
         path: 'aanbod/:naam',
         component: AanbodDetailComponent,
-        title: 'Detail'
+        title: 'Detail',
+        resolve: { treatment: AanbodDetailResolver }
       }
 ];

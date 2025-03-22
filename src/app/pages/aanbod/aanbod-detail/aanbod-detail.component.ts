@@ -12,13 +12,12 @@ import { CommonModule, Location } from '@angular/common';
 export class AanbodDetailComponent {
   treatment: any;
 
-  constructor(private router: Router, private route: ActivatedRoute, private aanbodDetailService: AanbodDetailService) {
+  constructor(private router: Router, private route: ActivatedRoute) {
   }
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      const treatmentName = params['naam'];
-      this.treatment = this.aanbodDetailService.getTreatmentByUrlName(treatmentName);
+    this.route.data.subscribe(data => {
+      this.treatment = data['treatment'];
     });
   }
   
