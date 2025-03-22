@@ -291,7 +291,8 @@
     gap: 10px;
 
     @media (max-width: 768px) {
-        justify-content: center;
+        // justify-content: center;
+        display: none;
     }
 }
 

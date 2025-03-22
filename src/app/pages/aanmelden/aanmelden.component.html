@@ -10,9 +10,9 @@
       <!-- <button mat-raised-button [class.active]="(step$ | async) === 2" (click)="setStep(2)">
         Behandeling
       </button> -->
-      <button mat-raised-button [class.active]="(step$ | async) === 2" (click)="setStep(2)">
+      <!-- <button mat-raised-button [class.active]="(step$ | async) === 2" (click)="setStep(2)">
         Datum & tijd
-      </button>
+      </button> -->
     </div>
 
     <div class="step-content">
@@ -20,9 +20,9 @@
         <h2>Telefonische pre-intake</h2>
         <p>
           Voordat we een officieel intakegesprek inplannen, vindt er eerst een telefonische pre-intake plaats. <br><br>
-          Dit gesprek duurt ongeveer 10-15 minuten en heeft als doel om elkaar kort te leren kennen, jouw situatie te bespreken en te bepalen of ik de juiste persoon ben om je verder te helpen. <br><br>
+          Dit gesprek duurt ongeveer 10-15 minuten en is bedoeld om kort kennis te maken, jouw situatie te bespreken en te bepalen of ik de juiste persoon ben om je verder te helpen. <br><br>
           Zo zorgen we ervoor dat het intakegesprek efficiënt en gericht verloopt. <br><br>
-          Vul het formulier in, dan neem ik op de gekozen datum en tijd contact met je op.<br><br>
+          Vul het formulier in, dan neem ik binnenkort contact met je op.<br><br>
         </p>
         <button mat-raised-button color="primary" (click)="nextStep()">Volgende</button>
       }
@@ -77,7 +77,7 @@
           </mat-form-field>
 
           <button mat-raised-button (click)="previousStep()">Terug</button>
-          <button mat-raised-button color="primary" (click)="nextStep()">Volgende</button>
+          <button mat-raised-button color="primary" (click)="submitAanmelding()">Verzenden</button>
         </form>
       }
 
@@ -100,7 +100,7 @@
           <button mat-raised-button color="primary" (click)="nextStep()">Volgende</button>
         </form>
       } -->
-
+<!-- 
       @if ((step$ | async) === 2) {
         <h2>Datum en tijd</h2>
         <form [formGroup]="aanmeldingForm">
@@ -128,7 +128,7 @@
           <button mat-raised-button (click)="previousStep()">Terug</button>
           <button mat-raised-button color="primary" (click)="submitAanmelding()">Verzenden</button>
         </form>
-      }
+      } -->
     </div>
   </div>
 </div>
