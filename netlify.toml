@@ -1,13 +1,4 @@
-[build]
-  command = "ng build && ng run praktijk-boom:server:production"
-  publish = "dist/praktijk-boom/browser"
-  functions = "dist/praktijk-boom/server"
-
-[functions]
-  node_bundler = "esbuild"
-  external_node_modules = ["@angular/platform-server"]
-
 [[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/server"
-  status = 200
+from = "/*"
+to = "/index.html"
+status = 200
