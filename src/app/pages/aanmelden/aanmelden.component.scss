@@ -41,7 +41,7 @@
     margin: 0 5px;
     padding: 10px;
     border: none;
-    background: #96babd;
+    // background: #96babd;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease;
@@ -52,13 +52,11 @@
     }
 
     &.active {
-      background: #00656c;
-      color: white;
+      background: #D4E0F4;
     }
 
     &:hover {
-      background: #00656c;
-      color: white;
+      background: #E6ECF8;
     }
   }
 }
@@ -116,11 +114,11 @@
     color: black;
 
     &:hover {
-      background: #00656c;
+      background: #fc665b;
     }
 
     &.active {
-      background: #00656c;
+      background: #fc665b;
       color: white;
     }
   }

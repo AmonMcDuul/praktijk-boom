@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { AanbodDetailService } from '../../../services/aanbod-detail.service';
 import { CommonModule, Location } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-aanbod-detail',
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, MatButtonModule],
   templateUrl: './aanbod-detail.component.html',
   styleUrl: './aanbod-detail.component.scss'
 })

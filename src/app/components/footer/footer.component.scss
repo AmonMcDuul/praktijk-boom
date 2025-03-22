@@ -1,7 +1,7 @@
 @use '../../../styles.scss' as *;
 
 .footer-container {
-//   background-color: #00656c;
+//   background-color: #fc665b;
   background-color: #fffcfc;
 //   color: #ffffff;
   color: black;
@@ -54,7 +54,7 @@
                       transition: color 0.3s ease-in-out;
 
                       &:hover {
-                          color: #ff9a93;
+                          color: #fc665b;
                       }
                   }
               }
