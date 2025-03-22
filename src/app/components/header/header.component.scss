@@ -73,7 +73,7 @@
             transition: color 0.3s ease;
 
             &:hover {
-                color: #ff9a93;
+                color: #fc665b;
             }
 
             &:after {
@@ -81,7 +81,7 @@
                 display: block;
                 width: 0;
                 height: 2px;
-                background: #ff9a93;
+                background: #fc665b;
                 transition: width 0.3s ease;
                 position: absolute;
                 bottom: -6px;

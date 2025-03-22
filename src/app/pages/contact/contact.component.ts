@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, CommonModule],
+  imports: [FormsModule, ReactiveFormsModule, CommonModule, MatButtonModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

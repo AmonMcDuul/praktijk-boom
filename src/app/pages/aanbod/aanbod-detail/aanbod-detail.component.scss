@@ -70,7 +70,7 @@
         transition: color 0.3s ease;
 
         &:hover {
-          color: #00656c;
+          color: #fc665b;
         }
 
         &:after {
@@ -78,7 +78,7 @@
           display: block;
           width: 0;
           height: 2px;
-          background: #00656c;
+          background: #fc665b;
           transition: width 0.3s ease;
           position: absolute;
           bottom: -6px;
@@ -98,17 +98,21 @@
     }
 
     .back-button {
-      background-color: #96babd;
-      padding: 10px 20px;
+      padding: 12px 30px;
+      color: black;
       border: none;
+      font-size: 1rem;
       border-radius: 5px;
-      font-size: 1.1rem;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background 0.3s ease, color 0.3s ease;
+      color: black;
+
+      @media (max-width: 768px) {
+          width: 100%;
+      }
 
       &:hover {
-        background-color: #00656c;
-        color: white;
+          background: #E6ECF8;
       }
     }
   }
@@ -121,7 +125,7 @@
   cursor: pointer;
 
   &:hover {
-    color: #00656c;
+    color: #fc665b;
   }
 
   @media (max-width: 768px) {
