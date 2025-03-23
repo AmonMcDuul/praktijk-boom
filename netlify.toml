@@ -1,4 +1,12 @@
+[build]
+  command = "ng build --prod"
+  publish = "dist/praktijk-boom"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[functions]
+  # Disable Edge Functions
+  edge_functions = false
