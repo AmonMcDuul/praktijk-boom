@@ -6,7 +6,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { AanmeldenComponent } from './pages/aanmelden/aanmelden.component';
 import { VerwijzersComponent } from './pages/verwijzers/verwijzers.component';
 import { AanbodDetailComponent } from './pages/aanbod/aanbod-detail/aanbod-detail.component';
-import { AanbodDetailResolver } from './util/aanbod-detail.resolver';
 
 export const routes: Routes = [
     {
@@ -40,9 +39,33 @@ export const routes: Routes = [
         title: 'Contact',
       },
       {
-        path: 'aanbod/:naam',
+        path: 'aanbod/cognitieve-gedragstherapie',
         component: AanbodDetailComponent,
-        title: 'Detail',
-        resolve: { treatment: AanbodDetailResolver }
-      }
+        title: 'Cognitieve Gedragstherapie',
+        data: { treatmentName: 'cognitieve-gedragstherapie' }
+      },
+      {
+        path: 'aanbod/adhd-diagnostiek-en-coaching',
+        component: AanbodDetailComponent,
+        title: 'ADHD Diagnostiek en Coaching',
+        data: { treatmentName: 'adhd-diagnostiek-en-coaching' }
+      },
+      {
+        path: 'aanbod/wandelsessies',
+        component: AanbodDetailComponent,
+        title: 'Wandelsessies',
+        data: { treatmentName: 'wandelsessies' }
+      },
+      {
+        path: 'aanbod/act-acceptance-and-commitment-therapy',
+        component: AanbodDetailComponent,
+        title: 'Acceptance and Commitment Therapy (ACT)',
+        data: { treatmentName: 'act-acceptance-and-commitment-therapy' }
+      },
+      {
+        path: 'aanbod/supervisie-gz-opleiding',
+        component: AanbodDetailComponent,
+        title: 'Supervisie GZ-opleiding',
+        data: { treatmentName: 'supervisie-gz-opleiding' }
+      },
 ];

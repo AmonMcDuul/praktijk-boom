@@ -13,13 +13,12 @@ import { MatButtonModule } from '@angular/material/button';
 export class AanbodDetailComponent {
   treatment: any;
 
-  constructor(private router: Router, private route: ActivatedRoute) {
+  constructor(private router: Router, private route: ActivatedRoute, private aanbodDetailService: AanbodDetailService) {
   }
 
   ngOnInit() {
-    this.route.data.subscribe(data => {
-      this.treatment = data['treatment'];
-    });
+    const treatmentName = this.route.snapshot.data['treatmentName'];
+    this.treatment = this.aanbodDetailService.getTreatmentByUrlName(treatmentName);
   }
   
   navigateToTreatmentDetail(treatmentName: string) {
