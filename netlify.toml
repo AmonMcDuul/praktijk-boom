@@ -1,7 +1,7 @@
 [build]
   command = "ng build --prod"
-  publish = "dist/praktijk-boom"
-
+  publish = "dist/praktijk-boom/browser"
+ 
 [[redirects]]
   from = "/*"
   to = "/index.html"
