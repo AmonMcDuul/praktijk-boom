@@ -8,3 +8,5 @@
   status = 200
 
 [functions]
+  # Disable Edge Functions
+  edge_functions = false
