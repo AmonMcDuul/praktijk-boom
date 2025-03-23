@@ -39,9 +39,15 @@ export const routes: Routes = [
         title: 'Contact',
       },
       {
+        path: 'aanbod/emdr-enkelvoudig-trauma',
+        component: AanbodDetailComponent,
+        title: 'EMDR',
+        data: { treatmentName: 'emdr-enkelvoudig-trauma' }
+      },
+      {
         path: 'aanbod/cognitieve-gedragstherapie',
         component: AanbodDetailComponent,
-        title: 'Cognitieve Gedragstherapie',
+        title: 'CTG',
         data: { treatmentName: 'cognitieve-gedragstherapie' }
       },
       {
@@ -59,7 +65,7 @@ export const routes: Routes = [
       {
         path: 'aanbod/act-acceptance-and-commitment-therapy',
         component: AanbodDetailComponent,
-        title: 'Acceptance and Commitment Therapy (ACT)',
+        title: 'ACT',
         data: { treatmentName: 'act-acceptance-and-commitment-therapy' }
       },
       {
