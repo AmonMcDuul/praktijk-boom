@@ -44,10 +44,5 @@ export const routes: Routes = [
         component: AanbodDetailComponent,
         title: 'Detail',
         resolve: { treatment: AanbodDetailResolver }
-      },
-      {
-        path: '**',
-        redirectTo: '',
-        pathMatch: 'full'
       }
 ];
