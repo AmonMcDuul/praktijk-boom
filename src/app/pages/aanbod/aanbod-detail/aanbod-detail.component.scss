@@ -1,7 +1,7 @@
 @use '../../../../styles.scss' as *;
 .treatment-detail-container {
   padding: 60px;
-  background-color: #fffcfc;
+  background-color: #f5f7fa;
   color: #333;
 
   @media (max-width: 768px) {
@@ -9,13 +9,14 @@
   }
 
   .treatment-content {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 
     h2 {
       font-size: 2.5rem;
       color: $primary-color;
       margin-bottom: 20px;
+      border-bottom: 2px solid #E6ECF8;
 
       @media (max-width: 768px) {
         font-size: 2rem;
@@ -38,6 +39,7 @@
         color: $primary-color;
         margin-top: 30px;
         margin-bottom: 15px;
+        border-bottom: 2px solid #E6ECF8;
 
         @media (max-width: 768px) {
           font-size: 1.5rem;

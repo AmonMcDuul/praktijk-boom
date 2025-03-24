@@ -9,7 +9,7 @@
         justify-content: space-between;
         padding: 60px;
         position: relative;
-        background-color: #fffcfc;
+        background-color: #f5f7fa;
 
         @media (max-width: 768px) {
             flex-direction: column;
@@ -203,7 +203,7 @@
     display: flex;
     padding: 0 60px 240px;
     color: rgb(0, 0, 0);
-    background-color: #fffcfc;
+    background-color: #f5f7fa;
     position: relative;
 
     &::after {

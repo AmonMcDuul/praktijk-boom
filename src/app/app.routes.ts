@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AanmeldenComponent } from './pages/aanmelden/aanmelden.component';
 import { VerwijzersComponent } from './pages/verwijzers/verwijzers.component';
 import { AanbodDetailComponent } from './pages/aanbod/aanbod-detail/aanbod-detail.component';
+import { PraktischeInfoComponent } from './pages/praktische-info/praktische-info.component';
 
 export const routes: Routes = [
     {
@@ -27,6 +28,11 @@ export const routes: Routes = [
         path: 'aanmelden',
         component: AanmeldenComponent,
         title: 'aanmelden',
+      },
+      {
+        path: 'informatie',
+        component: PraktischeInfoComponent,
+        title: 'Informatie',
       },
       {
         path: 'verwijzers',
