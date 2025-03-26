@@ -102,10 +102,11 @@ export class AanmeldenComponent implements OnInit {
           console.log('Aanmelding succesvol:', response);
           this.submissionSuccess = true;
           this.aanmeldingForm.reset();
-          this.aanmeldingService.setStep(0);
+          this.aanmeldingService.setStep(2);
           this.showConfirmation = true;
           setTimeout(() => {
             this.showConfirmation = false;
+            this.aanmeldingService.setStep(0);
           }, 10000); 
         },
         (error) => {
