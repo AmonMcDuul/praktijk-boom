@@ -6,4 +6,5 @@ export interface Aanmelding {
     selectedDate?: Date;
     selectedTime?: string;
     behandeling: string;
+    opmerking: string;
   }

@@ -18,7 +18,7 @@ export const CUSTOM_DATE_FORMATS = {
 };
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(withEventReplay()), provideHttpClient(withFetch()),     provideRouter(
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(withEventReplay()), provideHttpClient(withFetch()), provideRouter(
     routes, 
     withComponentInputBinding(),
     withInMemoryScrolling({ scrollPositionRestoration: 'top' }) 

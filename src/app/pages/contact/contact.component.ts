@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-contact',
@@ -15,6 +16,9 @@ export class ContactComponent {
     showContactFields = false;
     showConfirmation = false;
   
+    constructor(private apiService: ApiService) {}
+
+
     ngOnInit(): void {
       // Initialize the form group with controls
       this.contactForm = new FormGroup({
@@ -26,7 +30,8 @@ export class ContactComponent {
         phone: new FormControl('', [
         //   Validators.required,
         //   Validators.pattern(/^\+?\d{10,}$/)
-        ])
+        ]),
+        honeypot: new FormControl('')
       });
   
       this.contactForm.get('idea')?.valueChanges.subscribe(value => {
@@ -35,16 +40,31 @@ export class ContactComponent {
     }
   
     onSubmit(): void {
+      if (this.contactForm.get('honeypot')?.value !== '')  {
+        return;
+      }
       if (this.contactForm.valid) {
-        console.log('Form Data:', this.contactForm.value);
-        this.resetForm();
-        this.showConfirmation = true;
+
+        const subject = `Contact vraag van ${this.contactForm.get('name')?.value}`;
+        const body = `Name: ${this.contactForm.get('name')?.value}\nEmail: ${this.contactForm.get('email')?.value}\nTelephone: ${this.contactForm.get('phone')?.value}\n\nMessage:\n${this.contactForm.get('idea')?.value}`;
     
-        setTimeout(() => {
-          this.showConfirmation = false;
-        }, 10000); 
+        this.apiService.sendEmail(subject, body).subscribe(
+          response => {
+            console.log('Email sent successfully', response);
+            this.resetForm();
+            this.showConfirmation = true;
+        
+            setTimeout(() => {
+              this.showConfirmation = false;
+            }, 10000); 
+          },
+          error => {
+            console.error('Error sending email', error);
+          }
+        );
       }
     }
+  
   
     resetForm(): void {
       this.contactForm.reset();
