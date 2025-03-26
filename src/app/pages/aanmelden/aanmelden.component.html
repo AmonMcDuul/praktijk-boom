@@ -77,7 +77,7 @@
           </mat-form-field>
 
           <button mat-raised-button (click)="previousStep()">Terug</button>
-          <button mat-raised-button color="primary" (click)="submitAanmelding()">Verzenden</button>
+          <button mat-raised-button color="primary" (click)="submitAanmelding()" [disabled]="!aanmeldingForm.valid">Verzenden</button>
         </form>
       }
 

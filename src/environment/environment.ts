@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    apiUrl: 'https://pvdb-backend.azurewebsites.net/'
+    apiUrl: 'https://pvdb-backend.azurewebsites.net'
 };

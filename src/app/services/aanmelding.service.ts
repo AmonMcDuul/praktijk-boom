@@ -9,7 +9,6 @@ import { ApiService } from './api.service';
   providedIn: 'root',
 })
 export class AanmeldingService {
-  private apiUrl = 'https://localhost';
   private stepSubject = new BehaviorSubject<number>(0);
   step$ = this.stepSubject.asObservable();
   aanmeldingForm: FormGroup;
@@ -44,18 +43,13 @@ export class AanmeldingService {
     ];
   }
 
-  // checkAvailability(date: Date, time: string): Observable<boolean> {
-  //   return this.http.get<boolean>(`${this.apiUrl}/availability?date=${date.toISOString()}&time=${time}`);
-  // }
-
-  submitAanmelding(aanmelding: Aanmelding): Observable<any> {
+  submitAanmelding(): Observable<any> {
     const subject = "Pre-Intake aanvraag"
-    const body = `Naam: ${aanmelding.name}\n
-                  Geboortedatum: ${aanmelding.dateOfBirth.toISOString().split('T')[0]}\n
-                  Telefoon: ${aanmelding.telephone}\n
-                  E-mail: ${aanmelding.email}\n
-                  Behandeling: ${aanmelding.behandeling}\n
-                  Opmerking: ${aanmelding.opmerking}`;
+    const body = `Naam: ${this.aanmeldingForm.get('name')}\n
+                  Geboortedatum: ${this.aanmeldingForm.get('dateOfBirth')}\n
+                  Telefoon: ${this.aanmeldingForm.get('telephone')}\n
+                  E-mail: ${this.aanmeldingForm.get('email')}\n
+                  Opmerking: ${this.aanmeldingForm.get('opmerking')}`;
     return this.apiService.sendEmail(subject, body);
   }
 

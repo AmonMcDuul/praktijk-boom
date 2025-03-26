@@ -10,6 +10,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ApiService } from '../../services/api.service';
+import { Aanmelding } from '../../models/aanmelding.model';
 
 @Component({
   selector: 'app-aanmelden',
@@ -106,8 +107,7 @@ export class AanmeldenComponent implements OnInit {
       // Update the form value with the parsed date
       this.aanmeldingForm.patchValue({ dateOfBirth });
       
-      const aanmelding = this.aanmeldingForm.value;
-      this.aanmeldingService.submitAanmelding(aanmelding).subscribe(
+      this.aanmeldingService.submitAanmelding().subscribe(
         (response) => {
           console.log('Aanmelding succesvol:', response);
           this.submissionSuccess = true;
