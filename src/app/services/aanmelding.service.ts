@@ -55,10 +55,10 @@ export class AanmeldingService {
 submitAanmelding(): Observable<any> {
   const subject = "Pre-Intake aanvraag";
   const body = `Naam: ${this.aanmeldingForm.get('name')?.value}\n
-                Geboortedatum: ${this.getDateOfBirth()}\n
-                Telefoon: ${this.aanmeldingForm.get('telephone')?.value}\n
-                E-mail: ${this.aanmeldingForm.get('email')?.value}\n
-                Opmerking: ${this.aanmeldingForm.get('opmerking')?.value}`;
+Geboortedatum: ${this.getDateOfBirth()}\n
+Telefoon: ${this.aanmeldingForm.get('telephone')?.value}\n
+E-mail: ${this.aanmeldingForm.get('email')?.value}\n
+Opmerking: ${this.aanmeldingForm.get('opmerking')?.value}`;
   return this.apiService.sendEmail(subject, body);
   }
 
