@@ -49,7 +49,9 @@ export class AanmeldenComponent implements OnInit {
     const currentYear = new Date().getFullYear();
     this.years = Array.from({ length: currentYear - 1900 + 1 }, (_, i) => 1900 + i);
     this.behandelOptions = this.aanmeldingService.getBehandelOptions();
-    this.apiService.setAlive();
+    this.apiService.setAlive().subscribe({
+      error: err => console.error('setAlive error:', err)
+    });
   }
 
   // Date filter to restrict selection to specific days
@@ -92,7 +94,8 @@ export class AanmeldenComponent implements OnInit {
   }
 
   submitAanmelding(): void {
-    if (this.aanmeldingForm.valid) {
+    const honeypotValue = this.aanmeldingForm.get('honeypot')?.value;
+    if (this.aanmeldingForm.valid && (!honeypotValue || honeypotValue.trim() === '')) {
       this.aanmeldingService.submitAanmelding().subscribe(
         (response) => {
           console.log('Aanmelding succesvol:', response);

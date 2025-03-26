@@ -76,6 +76,8 @@
             <textarea matInput formControlName="opmerking" rows="4"></textarea>
           </mat-form-field>
 
+          <input type="text" formControlName="honeypot" class="honeypot">
+
           <button mat-raised-button (click)="previousStep()">Terug</button>
           <button mat-raised-button color="primary" (click)="submitAanmelding()" [disabled]="!aanmeldingForm.valid">Verzenden</button>
         </form>

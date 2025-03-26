@@ -37,7 +37,9 @@ export class ContactComponent {
       this.contactForm.get('idea')?.valueChanges.subscribe(value => {
         this.showContactFields = value.trim().length > 0;
       });
-      this.apiService.setAlive();
+      this.apiService.setAlive().subscribe({
+        error: err => console.error('setAlive error:', err)
+      });
     }
   
     onSubmit(): void {
