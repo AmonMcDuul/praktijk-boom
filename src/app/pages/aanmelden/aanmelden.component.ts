@@ -30,6 +30,7 @@ import { Aanmelding } from '../../models/aanmelding.model';
 export class AanmeldenComponent implements OnInit {
   behandelOptions: string[] = [];
   submissionSuccess: boolean | null = null;
+  showConfirmation = false;
   step$;
   aanmeldingForm: FormGroup;
   days: number[] = [];
@@ -101,7 +102,11 @@ export class AanmeldenComponent implements OnInit {
           console.log('Aanmelding succesvol:', response);
           this.submissionSuccess = true;
           this.aanmeldingForm.reset();
-          this.aanmeldingService.setStep(1);
+          this.aanmeldingService.setStep(0);
+          this.showConfirmation = true;
+          setTimeout(() => {
+            this.showConfirmation = false;
+          }, 10000); 
         },
         (error) => {
           console.error('Fout bij aanmelden:', error);
