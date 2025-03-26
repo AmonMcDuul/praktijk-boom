@@ -16,14 +16,22 @@ export class AanmeldingService {
   constructor(private fb: FormBuilder, private apiService: ApiService) {
     this.aanmeldingForm = this.fb.group({
       name: ['', Validators.required],
-      dateOfBirth: ['', Validators.required],
+      day: ['', Validators.required],
+      month: ['', Validators.required],
+      year: ['', Validators.required],
       telephone: ['', [Validators.required, Validators.pattern(/^\+?[0-9]{10,}$/)]],
       email: ['', [Validators.required, Validators.email]],
-      behandeling: ['', Validators.required],
+      behandeling: [''],
       opmerking: [''],
-      selectedDate: [null, Validators.required], 
-      selectedTime: ['', Validators.required],
+      selectedDate: [null], 
+      selectedTime: [''],
     });
+  }
+
+  getDateOfBirth(): string {
+    const { day, month, year } = this.aanmeldingForm.value;
+    if (!day || !month || !year) return '';
+    return `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
   }
 
   // Get the full date in the desired format
@@ -43,14 +51,14 @@ export class AanmeldingService {
     ];
   }
 
-  submitAanmelding(): Observable<any> {
-    const subject = "Pre-Intake aanvraag"
-    const body = `Naam: ${this.aanmeldingForm.get('name')}\n
-                  Geboortedatum: ${this.aanmeldingForm.get('dateOfBirth')}\n
-                  Telefoon: ${this.aanmeldingForm.get('telephone')}\n
-                  E-mail: ${this.aanmeldingForm.get('email')}\n
-                  Opmerking: ${this.aanmeldingForm.get('opmerking')}`;
-    return this.apiService.sendEmail(subject, body);
+submitAanmelding(): Observable<any> {
+  const subject = "Pre-Intake aanvraag";
+  const body = `Naam: ${this.aanmeldingForm.get('name')?.value}\n
+                Geboortedatum: ${this.getDateOfBirth()}\n
+                Telefoon: ${this.aanmeldingForm.get('telephone')?.value}\n
+                E-mail: ${this.aanmeldingForm.get('email')?.value}\n
+                Opmerking: ${this.aanmeldingForm.get('opmerking')?.value}`;
+  return this.apiService.sendEmail(subject, body);
   }
 
   setStep(step: number): void {

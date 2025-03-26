@@ -49,10 +49,6 @@ export class AanmeldenComponent implements OnInit {
     const currentYear = new Date().getFullYear();
     this.years = Array.from({ length: currentYear - 1900 + 1 }, (_, i) => 1900 + i);
     this.behandelOptions = this.aanmeldingService.getBehandelOptions();
-
-    this.aanmeldingForm.addControl('day', new FormControl('', Validators.required));
-    this.aanmeldingForm.addControl('month', new FormControl('', Validators.required));
-    this.aanmeldingForm.addControl('year', new FormControl('', Validators.required));
     this.apiService.setAlive();
   }
 
@@ -97,16 +93,6 @@ export class AanmeldenComponent implements OnInit {
 
   submitAanmelding(): void {
     if (this.aanmeldingForm.valid) {
-      const day = this.aanmeldingForm.value.day;
-      const month = this.aanmeldingForm.value.month;
-      const year = this.aanmeldingForm.value.year;
-
-      // Create a Date object
-      const dateOfBirth = new Date(year, month - 1, day);
-
-      // Update the form value with the parsed date
-      this.aanmeldingForm.patchValue({ dateOfBirth });
-      
       this.aanmeldingService.submitAanmelding().subscribe(
         (response) => {
           console.log('Aanmelding succesvol:', response);
