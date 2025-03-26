@@ -11,8 +11,8 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
-  setAlive(): void {
-    this.http.get<any>(`${this.apiUrl}/home/setalive`);
+  setAlive(): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/home/setalive`);
   }
 
   sendEmail(subject: string, body: string): Observable<any> {
