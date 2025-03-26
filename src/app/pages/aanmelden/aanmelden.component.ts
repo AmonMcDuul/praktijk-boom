@@ -38,7 +38,7 @@ export class AanmeldenComponent implements OnInit {
   ];
   years: number[] = [];
 
-  constructor(private aanmeldingService: AanmeldingService) {
+  constructor(private aanmeldingService: AanmeldingService, private apiService: ApiService) {
     this.aanmeldingForm = this.aanmeldingService.aanmeldingForm;
     this.step$ = this.aanmeldingService.step$;
   }
@@ -52,6 +52,7 @@ export class AanmeldenComponent implements OnInit {
     this.aanmeldingForm.addControl('day', new FormControl('', Validators.required));
     this.aanmeldingForm.addControl('month', new FormControl('', Validators.required));
     this.aanmeldingForm.addControl('year', new FormControl('', Validators.required));
+    this.apiService.setAlive();
   }
 
   // Date filter to restrict selection to specific days
