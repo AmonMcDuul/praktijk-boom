@@ -7,6 +7,7 @@ import { AanmeldenComponent } from './pages/aanmelden/aanmelden.component';
 import { VerwijzersComponent } from './pages/verwijzers/verwijzers.component';
 import { AanbodDetailComponent } from './pages/aanbod/aanbod-detail/aanbod-detail.component';
 import { PraktischeInfoComponent } from './pages/praktische-info/praktische-info.component';
+import { PrivacyStatementComponent } from './pages/praktische-info/privacy-statement/privacy-statement.component';
 
 export const routes: Routes = [
     {
@@ -33,6 +34,11 @@ export const routes: Routes = [
         path: 'informatie',
         component: PraktischeInfoComponent,
         title: 'Informatie',
+      },
+      {
+        path: 'privacy-policy',
+        component: PrivacyStatementComponent,
+        title: 'privacy-policy',
       },
       {
         path: 'verwijzers',
