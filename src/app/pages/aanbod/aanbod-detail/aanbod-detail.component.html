@@ -23,6 +23,10 @@
         [class.active]="isActive('act-acceptance-and-commitment-therapy')"
       >ACT</a>
       <a 
+        (click)="navigateToTreatmentDetail('schematherapie')"
+        [class.active]="isActive('schematherapie')"
+      >Schematherapie</a>
+      <a 
         (click)="navigateToTreatmentDetail('supervisie-gz-opleiding')"
         [class.active]="isActive('supervisie-gz-opleiding')"
       >Supervisie</a>

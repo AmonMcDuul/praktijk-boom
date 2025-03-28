@@ -81,6 +81,12 @@ export const routes: Routes = [
         data: { treatmentName: 'act-acceptance-and-commitment-therapy' }
       },
       {
+        path: 'aanbod/schematherapie',
+        component: AanbodDetailComponent,
+        title: 'ACT',
+        data: { treatmentName: 'schematherapie' }
+      },
+      {
         path: 'aanbod/supervisie-gz-opleiding',
         component: AanbodDetailComponent,
         title: 'Supervisie GZ-opleiding',

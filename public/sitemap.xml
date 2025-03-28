@@ -53,6 +53,10 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://praktijkvanderboom.nl/aanbod/schematherapie</loc>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://praktijkvanderboom.nl/aanbod/supervisie-gz-opleiding</loc>
         <priority>0.7</priority>
     </url>

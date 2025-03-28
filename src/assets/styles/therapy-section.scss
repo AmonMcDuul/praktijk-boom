@@ -1,0 +1,108 @@
+.therapy-section {
+    padding: 80px 20px;
+    background-color: #AAC9CB;
+    text-align: center;
+  
+    .services-grid-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin: 0 auto;
+    }
+  
+    .service-card {
+      flex: 0 0 calc(33.333% - 30px);
+      max-width: 350px;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+  
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+        
+        .card-footer {
+          background: #fd8f87;
+        }
+      }
+  
+      .card-icon {
+        padding: 30px 0 15px;
+        color: #7BA05B;
+        
+        i {
+          font-size: 2.5rem;
+        }
+      }
+  
+      h4 {
+        margin: 0 25px 15px;
+        font-size: 1.3rem;
+        color: #333;
+        min-height: 3.2rem;
+      }
+  
+      p {
+        margin: 0 25px 25px;
+        color: #666;
+        line-height: 1.5;
+        font-size: 1rem;
+        flex-grow: 1;
+      }
+  
+      .card-footer {
+        background: #7BA05B;
+        color: white;
+        padding: 12px;
+        font-weight: 500;
+        transition: background 0.3s;
+      }
+    }
+  
+    .details-link {
+      display: inline-block;
+      margin-top: 50px;
+      font-size: 1.2rem;
+      color: #2c3e50;
+      cursor: pointer;
+      transition: color 0.3s;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-color: rgba(44, 62, 80, 0.3);
+  
+      &:hover {
+        color: #fc665b;
+        text-decoration-color: #fc665b;
+      }
+    }
+  
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      .service-card {
+        flex: 0 0 calc(50% - 20px);
+      }
+    }
+  
+    @media (max-width: 768px) {
+      padding: 60px 15px;
+  
+      .service-card {
+        flex: 0 0 100%;
+        max-width: 400px;
+      }
+    }
+  }

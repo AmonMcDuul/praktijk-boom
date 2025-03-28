@@ -58,6 +58,16 @@ export class AanbodDetailService {
     },
     {
       id: 6,
+      urlName: 'schematherapie',
+      name: 'Schematherapie',
+      intro: 'Ontdek en verander diepgewortelde patronen die je dagelijks leven beïnvloeden.',
+      description: 'Schematherapie is een integratieve therapie die elementen combineert uit cognitieve gedragstherapie, hechtingstheorie en experiëntiële technieken. Het richt zich op het identificeren en veranderen van disfunctionele schema\'s - diepgewortelde overtuigingspatronen die in de kindertijd zijn ontstaan en die nog steeds invloed hebben op je denken, voelen en handelen.',
+      targetAudience: 'Deze therapie is bij uitstek geschikt voor mensen met hardnekkige emotionele problemen, persoonlijkheidsproblematiek of voor wie andere therapieën onvoldoende hebben geholpen. Het is effectief bij onder andere chronische depressie, angststoornissen en relatieproblemen.',
+      expectations: 'Je werkt aan het herkennen van je schema\'s en modi (emotionele toestanden), en leert deze te veranderen door middel van gesprekken, imaginatie-oefeningen en ervaringsgerichte technieken. De therapeut biedt hierbij een "corrigerende emotionele ervaring".',
+      duration: 'Een schematherapie behandeling duurt gemiddeld 25 tot 50 sessies van 60 minuten, afhankelijk van de complexiteit.'
+    },
+    {
+      id: 7,
       urlName: 'supervisie-gz-opleiding',
       name: 'Supervisie GZ-opleiding',
       intro: 'Begeleiding en ondersteuning tijdens je opleiding tot GZ-psycholoog, gericht op persoonlijke groei en professionele ontwikkeling in je werk.',

@@ -20,7 +20,7 @@
       </div>
     </div>
   
-    <div class="therapy-section group-therapy">
+    <!-- <div class="therapy-section group-therapy">
       <div class="services-grid">
         <div class="service-item" (click)="navigateToTreatmentDetail('emdr-enkelvoudig-trauma')">
           <i class="fas fa-brain"></i>
@@ -54,73 +54,197 @@
         </div>
       </div>
       <h3 class="details-link" [routerLink]="['/aanbod', 'emdr-enkelvoudig-trauma']">Klik hier of op het kaartje voor meer details</h3>
-    </div>
-  
-    <div class="therapy-section individual-therapy">
-    </div>
-  
-  </section>
-  <section class="voor-wie-container">
-    <div class="voor-wie-content">
-      <h2>Voor wie</h2>
-      <p>
-        In mijn praktijk behandel ik mensen binnen de basis ggz bij volwassenen. Dit houdt in dat ik mij richt op kortdurende behandelingen voor enkelvoudige problematiek. Hierbij behandel ik volwassen met lichte tot matige problematiek. 
-      </p>
-      <p>
-        Vooraf vindt er een screening plaats, waarbij in een gratis telefonisch consult wordt bekeken of ik de best passende zorg kan bieden.
-      </p>
-      <br>
-      <br>
-      <br>
-      <div class="text-container">
-        <div class="sub-container">
-          <h3>Problemen waarmee je bij mij terecht kan</h3>
-          <p>Soms loop je in het leven tegen dingen aan die je niet alleen wilt of kunt dragen. Misschien ervaar je angst of paniek die je belemmert in je dagelijks leven, of worstel je met sombere gevoelens en een negatief zelfbeeld. Ook thema’s zoals dwanggedachten, trauma, burn-out en rouw kunnen ervoor zorgen dat je vastloopt. Ik bied begeleiding bij deze en andere klachten, zoals ADHD, lichte persoonlijkheidsproblematiek en levensfaseproblematiek. Samen kijken we naar wat jij nodig hebt om weer grip te krijgen op je leven.</p>
-          <h3 class="aanmelden-click" [routerLink]="'/aanmelden'">Jezelf aanmelden? Klik dan hier</h3>
-        </div>
+    </div> -->
 
-          <div class="sub-container">
-            <div class="pill-container">
-              <span class="pill">Angst</span>
-              <span class="pill">Paniek</span>
-              <span class="pill">Depressie</span>
-              <span class="pill">Dwang</span>
-            <span class="pill">Trauma</span>
-            <span class="pill">Burn-out</span>
-            <span class="pill">Levensfaseproblematiek</span>
-            <span class="pill">Negatief zelfbeeld</span>
-            <span class="pill">Rouw</span>
-            <span class="pill">Lichte persoonlijkheidsproblematiek</span>
-            <span class="pill">ADHD</span>
+    <div class="therapy-section">
+      <div class="services-grid-container">
+        <div class="services-grid">
+          <!-- EMDR enkelvoudig trauma -->
+          <div class="service-card" (click)="navigateToTreatmentDetail('emdr-enkelvoudig-trauma')">
+            <div class="card-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h4>EMDR enkelvoudig trauma</h4>
+            <p>Een effectieve behandeling voor trauma's met bewezen resultaten.</p>
+            <div class="card-footer">Meer info →</div>
+          </div>
+    
+          <!-- Cognitieve gedragstherapie -->
+          <div class="service-card" (click)="navigateToTreatmentDetail('cognitieve-gedragstherapie')">
+            <div class="card-icon">
+              <i class="fas fa-user-md"></i>
+            </div>
+            <h4>Cognitieve gedragstherapie</h4>
+            <p>Doorbreek negatieve gedachten en ontwikkel helpende gedragspatronen.</p>
+            <div class="card-footer">Meer info →</div>
+          </div>
+    
+          <!-- ADHD Diagnostiek en coaching -->
+          <div class="service-card" (click)="navigateToTreatmentDetail('adhd-diagnostiek-en-coaching')">
+            <div class="card-icon">
+              <i class="fas fa-chart-bar"></i>
+            </div>
+            <h4>ADHD Diagnostiek en coaching</h4>
+            <p>Heb je al langer vermoedens van AD(H)D? Samen onderzoeken we of je ADHD hebt.</p>
+            <div class="card-footer">Meer info →</div>
+          </div>
+    
+          <!-- Wandelsessies -->
+          <div class="service-card" (click)="navigateToTreatmentDetail('wandelsessies')">
+            <div class="card-icon">
+              <i class="fas fa-hiking"></i>
+            </div>
+            <h4>Wandelsessies</h4>
+            <p>Al wandelend op weg naar minder stress & meer balans en plezier in je leven.</p>
+            <div class="card-footer">Meer info →</div>
+          </div>
+    
+          <!-- Acceptance and Commitment Therapy (ACT) -->
+          <div class="service-card" (click)="navigateToTreatmentDetail('act-acceptance-and-commitment-therapy')">
+            <div class="card-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <h4>Acceptance and Commitment Therapy (ACT)</h4>
+            <p>Leer gedachten en emoties te accepteren en waardevolle acties te ondernemen.</p>
+            <div class="card-footer">Meer info →</div>
+          </div>
+    
+          <!-- Schematherapie -->
+          <div class="service-card" (click)="navigateToTreatmentDetail('schematherapie')">
+            <div class="card-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h4>Schematherapie</h4>
+            <p>Ontdek en verander diepgewortelde patronen die je dagelijks leven beïnvloeden.</p>
+            <div class="card-footer">Meer info →</div>
+          </div>
+
+          <!-- Supervisie GZ-opleiding -->
+          <div class="service-card" (click)="navigateToTreatmentDetail('supervisie-gz-opleiding')">
+            <div class="card-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h4>Supervisie GZ-opleiding</h4>
+            <p>Begeleiding tijdens je opleiding tot GZ-psycholoog voor professionele groei.</p>
+            <div class="card-footer">Meer info →</div>
+          </div>
+         
+        </div>
+      </div>
+      <h3 class="details-link" [routerLink]="['/aanbod', 'emdr-enkelvoudig-trauma']">Klik hier of op een kaartje voor meer details</h3>
+    </div>
+  
+        <div class="wave-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#AAC9CB"></path>
+          <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="#AAC9CB"></path>
+          <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#AAC9CB"></path>
+        </svg>
+      </div>
+  </section>
+
+  <section class="target-audience">
+    <div class="wide-container">
+      <div class="content-wrapper">
+      <div class="audience-section positive">
+        <div class="section-header">
+          <h2>Voor wie is mijn praktijk geschikt?</h2>
+          <div class="divider"></div>
+          <p class="intro">Ik bied kortdurende behandelingen binnen de basis GGZ voor volwassenen met lichte tot matige klachten. Tijdens een gratis telefonische intake bespreken we of mijn aanbod aansluit bij jouw hulpvraag.</p>
+        </div>
+  
+        <div class="content-grid">
+          <div class="text-content">
+            <h3>Ik kan je helpen bij:</h3>
+            <p>Ieder mens loopt wel eens vast in het leven. Of je nu worstelt met angst, somberheid, trauma of andere psychische klachten - samen werken we aan meer grip en veerkracht. Mijn behandelingen richten zich op:</p>
+            
+            <div class="tag-cloud">
+              <div class="tag">Angst- & paniekklachten</div>
+              <div class="tag">Depressieve gevoelens</div>
+              <div class="tag">Traumaverwerking</div>
+              <div class="tag">Burn-out & stress</div>
+              <div class="tag">Levensfasevraagstukken</div>
+              <div class="tag">Zelfbeeldproblematiek</div>
+              <div class="tag">Verlies & rouw</div>
+              <div class="tag">ADHD begeleiding</div>
+              <div class="tag">Lichte persoonlijkheidsproblematiek</div>
+            </div>
+          </div>
+  
+          <div class="visual-content">
+            <!-- <div class="illustration">
+              <img src="/assets/img/therapy-positive.svg" alt="Positieve therapie-ervaring">
+            </div> -->
+            <a routerLink="/aanmelden" class="cta-button">
+              <span>Direct aanmelden</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
           </div>
         </div>
-        </div>
       </div>
-  </section>
-  <section class="voor-wie-niet-container">
-    <div class="voor-wie-niet-content">
-      <div class="text-container">
-        <div class="sub-container">
-        <div class="pill-container">
-          <span class="pill red">Alcohol- of drugsafhankelijkheid</span>
-          <span class="pill red">Psychotische stoornis</span>
-          <span class="pill red">Dissociatieve stoornissen</span>
-          <span class="pill red">Complex PTSS</span>
-          <span class="pill red">Suïcidaliteit en crisisgevoeligheid</span>
-          <span class="pill red">Eetproblematiek</span>
-          <span class="pill red">Matige en ernstige persoonlijkheidsproblematiek</span>
-          <span class="pill red">Bipolaire stemmingsstoornis</span>
-          <span class="pill red">Autisme spectrum problematiek waarvoor een grotere zorgvraag is</span>
-          <span class="pill red">Ernstige dwangstoornis</span>
-          <span class="pill red">Ernstige depressie</span>
-          <span class="pill red">Relatieproblemen</span>
+  
+
+      <div class="audience-section negative">
+        <div class="wave-divider">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,120V73.71c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,87.57,512.34,66.33,583,47.95c69.27-18,138.3-24.88,209.4-13.08,36.15,6,69.85,17.84,104.45,29.34C989.49,95,1113,134.29,1200,67.53V120Z" opacity=".25" fill="#AAC9CB"></path>
+            <path d="M0,120V104.19c13-21.11,27.64-41.05,47.69-47.95C99.41,8.73,165,8,224.58,28.42c31.15,10.15,60.09,26.07,89.67,39.8,40.92,19,84.73,46,130.83,49.67,36.26,2.85,70.9-9.42,98.6-31.56,31.77-25.39,62.32-62,103.63-73,40.44-10.79,81.35,6.69,119.13,24.28s75.16,39,116.92,43.05c59.73,5.85,113.28-22.88,168.9-38.84,30.2-8.66,59-6.17,87.09,7.5,22.43,10.89,48,26.93,60.65,49.24V120Z" opacity=".5" fill="#AAC9CB"></path>
+            <path d="M0,120V114.37c149.93-55.62,314.09-69.32,475.83-42.57,43,7.64,84.23,20.12,127.61,26.46,59,8.63,112.48-12.24,165.56-35.4C827.93,42.78,886,24.76,951.2,30c86.53,7,172.46,45.71,248.8,84.81V120Z" fill="#AAC9CB"></path>
+          </svg>
         </div>
-      </div>
-        <div class="sub-container">
-          <h3>Wanneer ik niet de juiste hulp kan bieden</h3>
-          <p>
-            Sommige problemen vragen om gespecialiseerde zorg die ik helaas niet kan bieden. Dit geldt bijvoorbeeld voor alcohol- of drugsafhankelijkheid, psychotische stoornissen, complexe PTSS en dissociatieve stoornissen. Ook bij ernstige depressie, suïcidaliteit en crisisgevoeligheid is intensievere ondersteuning nodig. Verder kan ik voor eetstoornissen, bipolaire stoornissen, ernstige dwang, en relatieproblemen niet de juiste hulp bieden. Heb je autisme en is er een bredere zorgvraag, of is er sprake van matige tot ernstige persoonlijkheidsproblematiek, dan verwijs ik je graag door naar een passende behandelaar.</p>
+    
+        <div class="full-width-bg">
+          <div class="container">
+        <div class="section-header">
+          <h3>Wanneer verwijs ik door?</h3>
+          <div class="divider"></div>
+          <p class="intro">Sommige problematiek vraagt om meer gespecialiseerde of intensievere zorg dan ik kan bieden. In deze gevallen help ik je graag met een passende verwijzing.</p>
+        </div>
+  
+        <div class="content-grid reversed">
+          <div class="text-content">
+            <p>Mijn praktijk is niet geschikt voor complexe problematiek zoals:</p>
+            
+            <div class="warning-cards">
+              <div class="warning-card">
+                <div class="warning-icon">!</div>
+                <div class="warning-text">Psychotische of bipolaire stoornissen</div>
+              </div>
+              <div class="warning-card">
+                <div class="warning-icon">!</div>
+                <div class="warning-text">Verslavingsproblematiek</div>
+              </div>
+              <div class="warning-card">
+                <div class="warning-icon">!</div>
+                <div class="warning-text">Eetstoornissen</div>
+              </div>
+              <div class="warning-card">
+                <div class="warning-icon">!</div>
+                <div class="warning-text">Suïcidaliteit of crisis</div>
+              </div>
+              <div class="warning-card">
+                <div class="warning-icon">!</div>
+                <div class="warning-text">Ernstige persoonlijkheidsproblematiek</div>
+              </div>
+              <div class="warning-card">
+                <div class="warning-icon">!</div>
+                <div class="warning-text">Complexe traumaverwerking</div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="visual-content">
+            <!-- <div class="illustration">
+              <img src="/assets/img/referral.svg" alt="Doorverwijzing naar specialist">
+            </div> -->
+            <p class="support-text">Twijfel je of mijn praktijk geschikt is? Neem gerust contact op voor advies over passende hulp.</p>
+          </div>
         </div>
       </div>
     </div>
+      </div>
+    </div>
+  </div>
   </section>
