@@ -30,54 +30,86 @@
       @if ((step$ | async) === 1) {
         <h2>Persoonlijke gegevens</h2>
         <form [formGroup]="aanmeldingForm">
-          <mat-label>Naam*</mat-label>
-          <mat-form-field appearance="fill">
+          <!-- Naam veld -->
+          <mat-label [class.invalid]="aanmeldingForm.get('name')?.invalid && aanmeldingForm.get('name')?.touched">Naam*</mat-label>
+          <mat-form-field appearance="fill" class="form-field">
             <input matInput formControlName="name" required>
+            <mat-error *ngIf="aanmeldingForm.get('name')?.errors?.['required'] && aanmeldingForm.get('name')?.touched">
+              Naam is verplicht
+            </mat-error>
           </mat-form-field>
 
-          <mat-label>Geboortedatum*</mat-label>
+          <!-- Geboortedatum velden -->
+          <mat-label [class.invalid]="(aanmeldingForm.get('day')?.invalid || aanmeldingForm.get('month')?.invalid || aanmeldingForm.get('year')?.invalid) && 
+                                    (aanmeldingForm.get('day')?.touched || aanmeldingForm.get('month')?.touched || aanmeldingForm.get('year')?.touched)">
+            Geboortedatum*
+          </mat-label>
           <div class="date-select-container">
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="fill" class="form-field">
               <mat-label>Dag</mat-label>
               <mat-select formControlName="day" required>
                 <mat-option *ngFor="let day of days" [value]="day">{{ day }}</mat-option>
               </mat-select>
+              <mat-error *ngIf="aanmeldingForm.get('day')?.errors?.['required'] && aanmeldingForm.get('day')?.touched">
+                Dag is verplicht
+              </mat-error>
             </mat-form-field>
           
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="fill" class="form-field">
               <mat-label>Maand</mat-label>
               <mat-select formControlName="month" required>
                 <mat-option *ngFor="let month of months; let i = index" [value]="i + 1">
                   {{ month }}
                 </mat-option>
               </mat-select>
+              <mat-error *ngIf="aanmeldingForm.get('month')?.errors?.['required'] && aanmeldingForm.get('month')?.touched">
+                Maand is verplicht
+              </mat-error>
             </mat-form-field>
           
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="fill" class="form-field">
               <mat-label>Jaar</mat-label>
               <mat-select formControlName="year" required>
                 <mat-option *ngFor="let year of years" [value]="year">{{ year }}</mat-option>
               </mat-select>
+              <mat-error *ngIf="aanmeldingForm.get('year')?.errors?.['required'] && aanmeldingForm.get('year')?.touched">
+                Jaar is verplicht
+              </mat-error>
             </mat-form-field>
           </div>
 
-          <mat-label>Telefoonnummer*</mat-label>
-          <mat-form-field appearance="fill">
+          <!-- Telefoonnummer veld -->
+          <mat-label [class.invalid]="aanmeldingForm.get('telephone')?.invalid && aanmeldingForm.get('telephone')?.touched">Telefoonnummer*</mat-label>
+          <mat-form-field appearance="fill" class="form-field">
             <input matInput formControlName="telephone" required>
+            <mat-error *ngIf="aanmeldingForm.get('telephone')?.errors?.['required'] && aanmeldingForm.get('telephone')?.touched">
+              Telefoonnummer is verplicht
+            </mat-error>
+            <mat-error *ngIf="aanmeldingForm.get('telephone')?.errors?.['pattern'] && aanmeldingForm.get('telephone')?.touched">
+              Voer een geldig telefoonnummer in (bijv. 0612345678)
+            </mat-error>
           </mat-form-field>
 
-          <mat-label>E-mail*</mat-label>
-          <mat-form-field appearance="fill">
+          <!-- E-mail veld -->
+          <mat-label [class.invalid]="aanmeldingForm.get('email')?.invalid && aanmeldingForm.get('email')?.touched">E-mail*</mat-label>
+          <mat-form-field appearance="fill" class="form-field">
             <input matInput formControlName="email" type="email" required>
+            <mat-error *ngIf="aanmeldingForm.get('email')?.errors?.['required'] && aanmeldingForm.get('email')?.touched">
+              E-mail is verplicht
+            </mat-error>
+            <mat-error *ngIf="aanmeldingForm.get('email')?.errors?.['email'] && aanmeldingForm.get('email')?.touched">
+              Voer een geldig e-mailadres in
+            </mat-error>
           </mat-form-field>
 
+          <!-- Opmerking (niet verplicht) -->
           <mat-label>Opmerking</mat-label>
           <mat-form-field appearance="fill">
             <textarea matInput formControlName="opmerking" rows="4"></textarea>
           </mat-form-field>
 
+          <!-- Honeypot en buttons -->
           <input type="text" formControlName="honeypot" class="honeypot">
-
           <button mat-raised-button (click)="previousStep()">Terug</button>
           <button mat-raised-button color="primary" (click)="submitAanmelding()" [disabled]="!aanmeldingForm.valid">Verzenden</button>
         </form>
