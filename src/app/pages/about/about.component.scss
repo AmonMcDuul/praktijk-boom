@@ -1,4 +1,4 @@
-// @use '../../../styles.scss' as *;
+@use '../../../styles.scss' as *;
 
 .about-container {
     overflow: hidden;
@@ -55,26 +55,6 @@
       flex: 1;
     }
     
-    // .hero-image {
-    //   flex: 0 0 30%;
-    //   position: relative;
-      
-    //   @media (max-width: 1024px) {
-    //     display: none;
-    //   }
-      
-    //   .image-wrapper {
-    //     position: relative;
-        
-    //     img {
-    //       width: 100%;
-    //       height: auto;
-    //       border-radius: 10px;
-    //       position: relative;
-    //       z-index: 2;
-    //     }
-    //   }
-    // }
     .hero-image {
       flex:  0 0 30%;
       position: relative;
