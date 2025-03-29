@@ -3,7 +3,7 @@
 .verwijzers-container {
   padding: 60px;
   background-color: #f5f7fa;
-  color: black;
+  color: $p-gray-color;
   line-height: 1.6;
 
   @media (max-width: 768px) {
@@ -20,6 +20,7 @@
     margin-bottom: 15px;
     padding-bottom: 10px;
     border-bottom: 2px solid #E6ECF8;
+    color: $header-color;
 
     &:first-child {
       margin-top: 0;
@@ -34,7 +35,7 @@
     font-size: 1.6rem;
     margin-top: 30px;
     margin-bottom: 15px;
-
+    color: $header-color;
     @media (max-width: 768px) {
       font-size: 1.4rem;
     }
@@ -43,7 +44,7 @@
   p {
     font-size: 1.1rem;
     margin-bottom: 20px;
-
+    
     @media (max-width: 768px) {
       font-size: 1rem;
     }
@@ -62,7 +63,7 @@
 
   .highlight-box {
     background-color: #E6ECF8;
-    border-left: 4px solid $primary-color;
+    border-left: 4px solid $header-color;
     padding: 20px;
     margin: 25px 0;
     border-radius: 0 4px 4px 0;
