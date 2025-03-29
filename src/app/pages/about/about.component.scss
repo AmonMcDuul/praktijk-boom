@@ -76,22 +76,12 @@
     //   }
     // }
     .hero-image {
-      flex: 0 0 30%;
+      flex:  0 0 30%;
       position: relative;
       z-index: 1;
       
       @media (max-width: 1024px) {
-        
-        img {
-          width: 80%;
-          max-width: 400px;
-          border-radius: 10px;
-          margin: 0 auto;
-          display: block;
-          border: 3px solid white;
-          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
+        display: none;
       }
     }
   
@@ -161,6 +151,9 @@
           font-weight: 500;
           color: #333;
         }
+        @media (max-width: 768px) {
+          font-size: 1rem;
+        }
       }
     }
     
@@ -176,6 +169,7 @@
         font-weight: 500;
         color: #2c3e50;
         margin: 0;
+        
       }
     }
   }
@@ -196,6 +190,9 @@
         &:last-child {
           margin-bottom: 0;
         }
+        @media (max-width: 768px) {
+          font-size: 1rem;
+        }
       }
       
       @media (max-width: 768px) {
@@ -203,7 +200,8 @@
         text-align: left;
         
         p {
-          font-size: 1.1rem;
+          font-size: 1rem;
+          
         }
       }
     }
