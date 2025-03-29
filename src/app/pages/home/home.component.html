@@ -96,7 +96,12 @@
         <div class="spacing"></div>
         <br>
         <h3 class="router-link" [routerLink]="'/aanbod'">Klik hier voor meer informatie over mijn aanbod</h3>
-        <h3 class="router-link" [routerLink]="'/aanmelden'">Jezelf aanmelden? Klik dan hier</h3>
+        <a routerLink="/aanmelden" class="cta-button">
+          <span>Direct aanmelden</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
     </section>  
     <div class="wave-divider">
       <svg viewBox="0 0 1200 120" preserveAspectRatio="none">

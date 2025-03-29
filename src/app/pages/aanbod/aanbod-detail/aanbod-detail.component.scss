@@ -120,17 +120,28 @@
   }
 }
 
-.aanmeld-link {
-  font-size: 1.4rem;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  cursor: pointer;
-
-  &:hover {
-    color: #fc665b;
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  background: #7BA05B;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  
+  svg {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
   }
-
-  @media (max-width: 768px) {
-    font-size: 1.2rem;
+  
+  &:hover {
+    background: darken(#7BA05B, 8%);
+    
+    svg {
+      transform: translateX(3px);
+    }
   }
 }
