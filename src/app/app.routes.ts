@@ -36,9 +36,9 @@ export const routes: Routes = [
         title: 'Informatie',
       },
       {
-        path: 'privacy-policy',
+        path: 'privacyverklaring',
         component: PrivacyStatementComponent,
-        title: 'privacy-policy',
+        title: 'privacyverklaring',
       },
       {
         path: 'verwijzers',

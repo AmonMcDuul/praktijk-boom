@@ -6,7 +6,7 @@
   
   /* Hero Sectie */
   .about-hero {
-    background-color: #f5f7fa;
+    background-color: $background-color;
     padding: 80px 0;
     position: relative;
     
@@ -287,20 +287,6 @@
     }
   }
   
-  /* Aangepaste Wave Divisie */
-  .custom-wave {
-    height: 120px;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    
-    svg {
-      width: calc(100% + 1.3px);
-      height: 100%;
-      display: block;
-    }
-  }
-  
   /* Kernwaarden Sectie */
   .core-values {
     background-color: #AAC9CB;
@@ -319,7 +305,7 @@
     h2 {
       text-align: center;
       font-size: 2.5rem;
-      color: white;
+      color: #2c3e50;
       margin-bottom: 60px;
       
       @media (max-width: 768px) {

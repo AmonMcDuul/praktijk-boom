@@ -2,12 +2,12 @@ $primary-color: #0e2c3a;
 $secondary-color: #2c3e50;
 $accent-color: #e74c3c;
 $light-gray: #f4f4f4;
-$background-color: #f7f7f7;
+$background-color: #f5f7fa;
 $text-color: #333;
 
 body {
   // background-color: $background-color;
-  background-color: #f5f7fa;
+  background-color: $background-color;
   color: $text-color;
   margin: 0;
   padding: 0;
@@ -15,3 +15,87 @@ body {
 }
 // html, body { height: 100%; }
 // body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+//shared
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  background: #7BA05B;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(123, 160, 91, 0.3);
+  
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
+  
+  svg {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover {
+    background: #fd8f87;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(123, 160, 91, 0.4);
+    
+    svg {
+      transform: translateX(5px);
+    }
+  }
+}
+
+.wave-divider {
+  height: 100px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  line-height: 0;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+.hero-wave {
+  height: 120px;
+  width: 100%;
+  margin-top: 80px;
+  
+  @media (max-width: 768px) {
+    margin-top: 60px;
+    height: 80px;
+  }
+  
+  svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+//animation
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.2s;
+}

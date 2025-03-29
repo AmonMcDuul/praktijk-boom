@@ -1,7 +1,7 @@
 @use '../../../../styles.scss' as *;
 .treatment-detail-container {
   padding: 60px;
-  background-color: #f5f7fa;
+  background-color: $background-color;
   color: #333;
 
   @media (max-width: 768px) {
@@ -116,32 +116,6 @@
       &:hover {
           background: #E6ECF8;
       }
-    }
-  }
-}
-
-.cta-button {
-  display: inline-flex;
-  align-items: center;
-  background: #7BA05B;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  margin-top: 20px;
-  
-  svg {
-    margin-left: 8px;
-    transition: transform 0.3s ease;
-  }
-  
-  &:hover {
-    background: darken(#7BA05B, 8%);
-    
-    svg {
-      transform: translateX(3px);
     }
   }
 }

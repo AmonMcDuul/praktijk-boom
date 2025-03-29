@@ -5,7 +5,7 @@
 
 .hero-section {
   position: relative;
-  background-color: #f5f7fa;
+  background-color: $background-color;
   padding: 80px 0 0;
   overflow: hidden;
 
@@ -76,35 +76,6 @@
     }
   }
 
-  .hero-button {
-    display: inline-flex;
-    align-items: center;
-    background: #7BA05B;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    margin-top: 30px;
-    box-shadow: 0 4px 15px rgba(123, 160, 91, 0.3);
-    
-    svg {
-      margin-left: 10px;
-      transition: transform 0.3s ease;
-    }
-    
-    &:hover {
-      background: darken(#7BA05B, 10%);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(123, 160, 91, 0.4);
-      
-      svg {
-        transform: translateX(5px);
-      }
-    }
-  }
-
   .hero-image {
     flex: 1;
     position: relative;
@@ -151,33 +122,16 @@
       transform: scale(1.05);
     }
   }
-
-  .hero-wave {
-    height: 120px;
-    width: 100%;
-    margin-top: 80px;
-    
-    @media (max-width: 768px) {
-      margin-top: 60px;
-      height: 80px;
-    }
-    
-    svg {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
-  }
 }
 
 .values {
     padding: 10px 20px 120px;
     text-align: center;
-    background-color: #f5f7fa;
+    background-color: $background-color;
 
     h2 {
         font-size: 2.5rem;
-        color: black;
+        color: #2c3e50;
         margin-bottom: 50px;
 
         @media (max-width: 768px) {
@@ -239,7 +193,7 @@
                 h3 {
                     font-size: 1.6rem;
                     margin-bottom: 10px;
-                    color: #000000;
+                    color: #2c3e50;
 
                     @media (max-width: 768px) {
                         font-size: 1.4rem;
@@ -248,7 +202,7 @@
 
                 p {
                     font-size: 1rem;
-                    color: #000000;
+                    color: #555;
 
                     @media (max-width: 768px) {
                         font-size: 0.9rem;
@@ -257,226 +211,4 @@
             }
         }
     }
-}
-
-.therapy-section {
-    padding: 80px 20px;
-    background-color: #AAC9CB;
-    text-align: center;
-  
-    h2 {
-        margin-top: 0;
-        font-size: 2.5rem;
-        text-align: center;
-        margin-bottom: 60px;
-
-        @media (max-width: 768px) {
-            font-size: 2rem;
-            margin-bottom: 40px;
-        }
-    }
-
-    .services-grid-container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-  
-    .services-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin: 0 auto;
-    }
-  
-    .service-card {
-      flex: 0 0 calc(33.333% - 30px);
-      max-width: 350px;
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
-      cursor: pointer;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-  
-      &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 20px rgba(0,0,0,0.12);
-        
-        .card-footer {
-          background: #fd8f87;
-        }
-      }
-  
-      .card-icon {
-        padding: 30px 0 15px;
-        color: #7BA05B;
-        
-        i {
-          font-size: 2.5rem;
-        }
-      }
-  
-      h4 {
-        margin: 0 25px 15px;
-        font-size: 1.3rem;
-        color: #333;
-        min-height: 3.2rem;
-      }
-  
-      p {
-        margin: 0 25px 25px;
-        color: #666;
-        line-height: 1.5;
-        font-size: 1rem;
-        flex-grow: 1;
-      }
-  
-      .card-footer {
-        background: #7BA05B;
-        color: white;
-        padding: 12px;
-        font-weight: 500;
-        transition: background 0.3s;
-      }
-    }
-  
-    .details-link {
-      display: inline-block;
-      margin-top: 50px;
-      font-size: 1.2rem;
-      color: #2c3e50;
-      cursor: pointer;
-      transition: color 0.3s;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-      text-decoration-color: rgba(44, 62, 80, 0.3);
-  
-      &:hover {
-        color: #fc665b;
-        text-decoration-color: #fc665b;
-      }
-    }
-  
-    /* Responsive adjustments */
-    @media (max-width: 1024px) {
-      .service-card {
-        flex: 0 0 calc(50% - 20px);
-      }
-    }
-  
-    @media (max-width: 768px) {
-      padding: 60px 15px;
-        
-      .service-card {
-        flex: 0 0 100%;
-        max-width: 350px;
-      }
-    }
-  }
-
-  
-  .router-link {
-    font-size: 1.4rem;
-    text-align: center;
-    margin-top: 60px;
-    cursor: pointer;
-    &:hover{
-        color: #fc665b;
-    }
-    @media (max-width: 768px) {
-        font-size: 1.2rem;
-        margin-top: 40px;
-    }
-}
-
-.wave-divider {
-    height: 100px;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    overflow: hidden;
-    line-height: 0;
-
-    svg {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
-  }
-
-.svg-b {
-    position: relative;
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: -30px;
-        left: 0;
-        width: 100%;
-        height: 150px;
-        background: url('/assets/img/sin-bb-1.svg') no-repeat center bottom;
-        background-size: cover;
-    } 
-}
-
-.svg-w {
-    position: relative;
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: 0px;
-        left: 0;
-        width: 100%;
-        height: 150px;
-        background: url('/assets/img/sin-y-1.svg') no-repeat center bottom;
-        background-size: cover;
-    } 
-}
-
-.cta-button {
-    display: inline-flex;
-    align-items: center;
-    background: #7BA05B;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    margin-top: 20px;
-    
-    svg {
-      margin-left: 8px;
-      transition: transform 0.3s ease;
-    }
-    
-    &:hover {
-      background: darken(#7BA05B, 8%);
-      
-      svg {
-        transform: translateX(3px);
-      }
-    }
-  }
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-on-scroll {
-    opacity: 0;
-    animation: fadeInUp 1s forwards;
-    animation-delay: 0.2s;
 }
