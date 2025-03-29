@@ -32,13 +32,13 @@
     h1 {
       font-size: 3.5rem;
       line-height: 1.2;
-      color: #2c3e50;
+      color: $header-color;
       margin-bottom: 20px;
       
       span {
         display: block;
         font-size: 1.8rem;
-        color: #7BA05B;
+        color: $subheader-color;
         margin-top: 10px;
       }
       
@@ -143,7 +143,7 @@
       p {
         font-size: 1.2rem;
         line-height: 1.8;
-        color: #555;
+        color: $p-gray-color;
         margin-bottom: 20px;
         
         &.lead {
@@ -159,7 +159,7 @@
     
     .highlight-box {
       background-color: #e5f4f6;
-      border-left: 4px solid #7BA05B;
+      border-left: 4px solid $highlight-green-color;
       padding: 20px;
       margin: 30px 0;
       border-radius: 0 8px 8px 0;
@@ -167,7 +167,7 @@
       p {
         font-size: 1.2rem;
         font-weight: 500;
-        color: #2c3e50;
+        color: $header-color;
         margin: 0;
         
       }
@@ -184,7 +184,7 @@
       p {
         font-size: 1.2rem;
         line-height: 1.8;
-        color: #555;
+        color: $p-gray-color;
         margin-bottom: 20px;
         
         &:last-child {
@@ -218,7 +218,7 @@
     h2 {
       text-align: center;
       font-size: 2.5rem;
-      color: #2c3e50;
+      color: $header-color;
       margin-bottom: 60px;
       
       @media (max-width: 768px) {
@@ -263,7 +263,7 @@
       
       h3 {
         font-size: 1.5rem;
-        color: #2c3e50;
+        color: $header-color;
         margin-bottom: 15px;
         position: relative;
         padding-bottom: 10px;
@@ -275,7 +275,7 @@
           left: 0;
           width: 50px;
           height: 3px;
-          background: #7BA05B;
+          background: $highlight-green-color;
         }
       }
       
@@ -289,7 +289,7 @@
   
   /* Kernwaarden Sectie */
   .core-values {
-    background-color: #AAC9CB;
+    background-color: $darker-background-color;
     padding: 100px 0;
     
     .values-container {
@@ -305,7 +305,7 @@
     h2 {
       text-align: center;
       font-size: 2.5rem;
-      color: #2c3e50;
+      color: $header-color;
       margin-bottom: 60px;
       
       @media (max-width: 768px) {
@@ -336,7 +336,7 @@
       .value-icon {
         width: 80px;
         height: 80px;
-        background: #7BA05B;
+        background: $highlight-green-color;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -351,14 +351,14 @@
       
       h3 {
         font-size: 1.5rem;
-        color: #2c3e50;
+        color: $header-color;
         margin-bottom: 15px;
       }
       
       p {
         font-size: 1.1rem;
         line-height: 1.7;
-        color: #666;
+        color: $p-gray-color;
       }
     }
   }

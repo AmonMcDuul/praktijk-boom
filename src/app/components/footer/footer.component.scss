@@ -2,7 +2,7 @@
 
 .footer-container {
 //   background-color: #fc665b;
-  background-color: #fffcfc;
+  background-color: $head-foot-color;
 //   color: #ffffff;
   color: black;
   display: flex;
@@ -57,7 +57,7 @@
                       transition: color 0.3s ease-in-out;
 
                       &:hover {
-                          color: #fc665b;
+                          color: $highlight-red-color;
                       }
                   }
               }

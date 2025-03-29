@@ -37,7 +37,7 @@
     h1 {
       font-size: 3.5rem;
       line-height: 1.2;
-      color: #2c3e50;
+      color: $header-color;
       margin-bottom: 15px;
       font-weight: 700;
       
@@ -48,7 +48,7 @@
     
     h2 {
       font-size: 1.8rem;
-      color: #7BA05B;
+      color: $subheader-color;
       margin-bottom: 30px;
       font-weight: 500;
       
@@ -62,11 +62,11 @@
     p {
       font-size: 1.2rem;
       line-height: 1.8;
-      color: #555;
+      color: $p-gray-color;
       margin-bottom: 20px;
       
       strong {
-        color: #2c3e50;
+        color: $header-color;
         font-weight: 600;
       }
       
@@ -131,7 +131,7 @@
 
     h2 {
         font-size: 2.5rem;
-        color: #2c3e50;
+        color: $header-color;
         margin-bottom: 50px;
 
         @media (max-width: 768px) {
@@ -162,7 +162,7 @@
                 align-items: center;
 
                 .icon-circle {
-                    background-color: #7BA05B;
+                    background-color: $highlight-green-color;
                     width: 70px;
                     height: 70px;
                     border-radius: 50%;
@@ -174,7 +174,7 @@
                     transition: background-color 0.3s ease;
 
                     &:hover {
-                        background-color: #fd8f87;
+                        background-color: $highlight-red-color;
                     }
                 }
 
@@ -193,7 +193,7 @@
                 h3 {
                     font-size: 1.6rem;
                     margin-bottom: 10px;
-                    color: #2c3e50;
+                    color: $header-color;
 
                     @media (max-width: 768px) {
                         font-size: 1.4rem;
@@ -202,7 +202,7 @@
 
                 p {
                     font-size: 1rem;
-                    color: #555;
+                    color: $p-gray-color;
 
                     @media (max-width: 768px) {
                         font-size: 0.9rem;

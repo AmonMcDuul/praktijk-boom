@@ -1,26 +1,25 @@
-$primary-color: #0e2c3a;
-$secondary-color: #2c3e50;
-$accent-color: #e74c3c;
-$light-gray: #f4f4f4;
+$head-foot-color: #fffcfc;
 $background-color: #f5f7fa;
-$text-color: #333;
+$darker-background-color: #AAC9CB;
+$header-color: #2c3e50;
+$subheader-color: #7BA05B;
+$p-gray-color: #555;
+$highlight-green-color: #7BA05B;
+$highlight-red-color: #fd8f87;
 
 body {
-  // background-color: $background-color;
   background-color: $background-color;
-  color: $text-color;
+  color: #333;
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-// html, body { height: 100%; }
-// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 //shared
 .cta-button {
   display: inline-flex;
   align-items: center;
-  background: #7BA05B;
+  background: $highlight-green-color;
   color: white;
   padding: 15px 30px;
   border-radius: 50px;
@@ -39,7 +38,7 @@ body {
   }
   
   &:hover {
-    background: #fd8f87;
+    background: $highlight-red-color;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(123, 160, 91, 0.4);
     

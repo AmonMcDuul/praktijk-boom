@@ -4,7 +4,7 @@
 
 .therapy-section {
     padding: 80px 20px;
-    background-color: #AAC9CB;
+    background-color: $darker-background-color;
     text-align: center;
   
     h2 {
@@ -12,7 +12,7 @@
         font-size: 2.5rem;
         text-align: center;
         margin-bottom: 60px;
-        color: #2c3e50;
+        color: $header-color;
 
         @media (max-width: 768px) {
             font-size: 2rem;
@@ -52,13 +52,13 @@
         box-shadow: 0 12px 20px rgba(0,0,0,0.12);
         
         .card-footer {
-          background: #fd8f87;
+          background: $highlight-red-color;
         }
       }
   
       .card-icon {
         padding: 30px 0 15px;
-        color: #7BA05B;
+        color: $highlight-green-color;
         
         i {
           font-size: 2.5rem;
@@ -68,7 +68,7 @@
       h4 {
         margin: 0 25px 15px;
         font-size: 1.3rem;
-        color: #2c3e50;
+        color: $header-color;
 
         min-height: 3.2rem;
       }
@@ -82,7 +82,7 @@
       }
   
       .card-footer {
-        background: #7BA05B;
+        background: $highlight-green-color;
         color: white;
         padding: 12px;
         font-weight: 500;
@@ -94,7 +94,7 @@
       display: inline-block;
       margin-top: 50px;
       font-size: 1.2rem;
-      color: #2c3e50;
+      color: $header-color;
       cursor: pointer;
       transition: color 0.3s;
       text-decoration: underline;
@@ -126,7 +126,7 @@
   .router-link {
     font-size: 1.4rem;
     text-align: center;
-    color: #2c3e50;
+    color: $header-color;
 
     cursor: pointer;
     &:hover{
