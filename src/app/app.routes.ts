@@ -92,4 +92,10 @@ export const routes: Routes = [
         title: 'Supervisie GZ-opleiding',
         data: { treatmentName: 'supervisie-gz-opleiding' }
       },
+      {
+        path: 'aanbod/coaching',
+        component: AanbodDetailComponent,
+        title: 'Coaching',
+        data: { treatmentName: 'coaching' }
+      },
 ];

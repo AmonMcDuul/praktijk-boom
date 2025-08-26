@@ -60,4 +60,8 @@
         <loc>https://praktijkvanderboom.nl/aanbod/supervisie-gz-opleiding</loc>
         <priority>0.7</priority>
     </url>
+    <url>
+        <loc>https://praktijkvanderboom.nl/aanbod/coaching</loc>
+        <priority>0.7</priority>
+    </url>
 </urlset>

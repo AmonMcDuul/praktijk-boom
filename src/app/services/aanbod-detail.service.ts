@@ -12,7 +12,7 @@ export class AanbodDetailService {
       name: 'EMDR enkelvoudig trauma',
       intro: 'Een effectieve behandeling voor trauma\'s met bewezen resultaten.',
       description: 'EMDR (Eye Movement Desensitization and Reprocessing) is een therapie die helpt om traumatische herinneringen te verwerken. Door middel van oogbewegingen of andere afleidende stimuli wordt het natuurlijke verwerkingssysteem van de hersenen gestimuleerd.',
-      targetAudience: 'Deze therapie is geschikt voor mensen die last hebben van een enkelvoudig trauma, zoals een ongeluk, verlies of een schokkende gebeurtenis.',
+      targetAudience: 'Deze therapie is geschikt voor mensen die last hebben van een enkelvoudig trauma, zoals een ongeluk, verlies of een schokkende gebeurtenis. Ook kan de therapie worden ingezet bij angstklachten. \n\nWanneer er sprake is van langdurig trauma of PTSS met ernstige klachten wordt er geadviseerd je aan te melden voor de SGGZ',
       expectations: 'Tijdens de sessies werk je samen met de therapeut aan het verwerken van de traumatische herinnering. Je kunt emotionele reacties ervaren, maar deze nemen af naarmate de behandeling vordert.',
       duration: 'Een EMDR-behandeling bestaat meestal uit 3 tot 6 sessies van 60 tot 90 minuten.'
     },
@@ -61,8 +61,8 @@ export class AanbodDetailService {
       urlName: 'schematherapie',
       name: 'Schematherapie',
       intro: 'Ontdek en verander diepgewortelde patronen die je dagelijks leven beïnvloeden.',
-      description: 'Schematherapie is een integratieve therapie die elementen combineert uit cognitieve gedragstherapie, hechtingstheorie en experiëntiële technieken. Het richt zich op het identificeren en veranderen van disfunctionele schema\'s - diepgewortelde overtuigingspatronen die in de kindertijd zijn ontstaan en die nog steeds invloed hebben op je denken, voelen en handelen.',
-      targetAudience: 'Deze therapie is bij uitstek geschikt voor mensen met hardnekkige emotionele problemen, persoonlijkheidsproblematiek of voor wie andere therapieën onvoldoende hebben geholpen. Het is effectief bij onder andere chronische depressie, angststoornissen en relatieproblemen.',
+      description: 'Schematherapie is een integratieve therapie die elementen combineert uit cognitieve gedragstherapie, hechtingstheorie en experiëntiële technieken. Het richt zich op het identificeren en veranderen van disfunctionele schema\'s, diepgewortelde overtuigingspatronen die in de kindertijd zijn ontstaan en die nog steeds invloed hebben op je denken, voelen en handelen.',
+      targetAudience: 'Deze therapie is bij uitstek geschikt voor mensen met patronen die bijdragen aan klachten in het dagelijks leven.  Binnen de kortdurende basisggz werk ik vooral vanuit schematherapie en de gezonde volwassene. Ik werk hierbij met technieken en elementen uit de schematherapie.\n\n Bij diepgaandere problematiek, zoals persoonlijkheidsstoornissen of complexere klachten, is volledige schematherapie binnen de specialistische ggz doorgaans meer passend. In dat geval adviseer ik om deze behandeling binnen de specialistische ggz (SGGZ) te volgen, zodat er ruimte is voor een grondigere en intensievere aanpak.',
       expectations: 'Je werkt aan het herkennen van je schema\'s en modi (emotionele toestanden), en leert deze te veranderen door middel van gesprekken, imaginatie-oefeningen en ervaringsgerichte technieken. De therapeut biedt hierbij een "corrigerende emotionele ervaring".',
       duration: 'Een schematherapie behandeling duurt gemiddeld 25 tot 50 sessies van 60 minuten, afhankelijk van de complexiteit.'
     },
@@ -75,6 +75,17 @@ export class AanbodDetailService {
       targetAudience: 'Deze supervisie is bedoeld voor aankomend GZ-psychologen die hun vaardigheden willen verbeteren en zich willen voorbereiden op de praktijk. Het is ook geschikt voor psychologen die zich verder willen ontwikkelen in hun vakgebied.',
       expectations: 'Tijdens de supervisiesessies bespreek je casussen uit je praktijk, reflecteer je op je handelen en krijg je feedback. Daarnaast werk je aan persoonlijke leerdoelen en professionele groei.',
       duration: 'Supervisie vindt meestal plaats in 10 tot 15 sessies van 60 minuten, afhankelijk van de behoeften en voortgang.'
+    },
+    {
+      id: 8,
+      urlName: 'coaching',
+      name: 'Coaching',
+      intro: 'Persoonlijke begeleiding en ondersteuning, zonder diagnose of verwijzing.',
+      description: 'Coaching biedt een laagdrempelige manier om stil te staan bij je persoonlijke ontwikkeling en welzijn. Samen werk je aan thema’s zoals grenzen, zelfvertrouwen en richting. Dit gebeurt in een open en praktische setting, zonder dat er sprake hoeft te zijn van een medische diagnose. Een vorm hiervan is wandelcoaching, waarbij gesprekken worden gecombineerd met beweging in de natuur voor extra ontspanning en inzicht.',
+      targetAudience: 'Coaching is geschikt voor mensen die willen werken aan hun persoonlijke groei, het voorkomen van mentale klachten of meer balans in hun leven. Ook passend bij vragen rondom zelfvertrouwen, omgaan met stress of het vinden van richting.',
+      expectations: 'Je onderzoekt terugkerende patronen en valkuilen, leert beter je grenzen voelen en vergroten we je zelfvertrouwen. Afhankelijk van de gekozen vorm (bijvoorbeeld wandelcoaching) gebeurt dit in een gespreksruimte of in de natuur.',
+      duration: 'Een coachingstraject bestaat doorgaans uit 3 tot 5 sessies van 45 tot 60 minuten. De duur en frequentie stemmen we af op jouw vraag en doelen.',
+      costs: 'Het tarief bedraagt €120 per sessie (vrijgesteld van btw). Vaak is er (gedeeltelijke) vergoeding mogelijk via je werkgever, omdat steeds meer organisaties coaching inzetten om het welzijn en de inzetbaarheid van medewerkers te bevorderen.'
     }
   ];
 

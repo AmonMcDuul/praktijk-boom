@@ -30,6 +30,10 @@
         (click)="navigateToTreatmentDetail('supervisie-gz-opleiding')"
         [class.active]="isActive('supervisie-gz-opleiding')"
       >Supervisie</a>
+      <a 
+      (click)="navigateToTreatmentDetail('coaching')"
+      [class.active]="isActive('coaching')"
+    >Coaching</a>
     </div>
       <!-- Titel en korte beschrijving -->
       <h2>{{ treatment.name }}</h2>
@@ -37,16 +41,33 @@
   
       <!-- Uitgebreide informatie -->
       <div class="details">
-        <h3>Wat houdt deze therapie in?</h3>
-        <p>{{ treatment.description }}</p>
-  
-        <h3>Voor wie is deze therapie geschikt?</h3>
-        <p>{{ treatment.targetAudience }}</p>
-  
-        <h3>Wat kun je verwachten?</h3>
-        <p>{{ treatment.expectations }}</p>
-  
+        @if(treatment.name == "Supervisie GZ-opleiding"){
+          <h3>Wat houdt dit in?</h3>
+          <p>{{ treatment.description }}</p>
+    
+          <h3>Voor wie is dit geschikt?</h3>
+          <p>{{ treatment.targetAudience }}</p>
+    
+          <h3>Wat kun je verwachten?</h3>
+          <p>{{ treatment.expectations }}</p>
+        } 
+        @else {
+          <h3>Wat houdt deze therapie in?</h3>
+          <p>{{ treatment.description }}</p>
+    
+          <h3>Voor wie is deze therapie geschikt?</h3>
+          <p>{{ treatment.targetAudience }}</p>
+    
+          <h3>Wat kun je verwachten?</h3>
+          <p>{{ treatment.expectations }}</p>
+    
+          @if(treatment.name == "Coaching"){
+            <h3>Kosten</h3>
+            <p>{{ treatment.costs }}</p>
+          }
+        }
       </div>
+      <br><br>
 
       <a routerLink="/aanmelden" class="cta-button">
         <span>Direct aanmelden</span>
