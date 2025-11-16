@@ -27,6 +27,10 @@
         [class.active]="isActive('schematherapie')"
       >Schematherapie</a>
       <a 
+        (click)="navigateToTreatmentDetail('groepsbehandeling-adhd-en-angst')"
+        [class.active]="isActive('groepsbehandeling-adhd-en-angst')"
+      >Groepsbehandelingen</a>
+      <a 
         (click)="navigateToTreatmentDetail('supervisie-gz-opleiding')"
         [class.active]="isActive('supervisie-gz-opleiding')"
       >Supervisie</a>

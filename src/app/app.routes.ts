@@ -87,6 +87,12 @@ export const routes: Routes = [
         data: { treatmentName: 'schematherapie' }
       },
       {
+        path: 'aanbod/groepsbehandeling-adhd-en-angst',
+        component: AanbodDetailComponent,
+        title: 'Groepsbehandeling ADHD en Angst',
+        data: { treatmentName: 'groepsbehandeling-adhd-en-angst' }
+      },
+      {
         path: 'aanbod/supervisie-gz-opleiding',
         component: AanbodDetailComponent,
         title: 'Supervisie GZ-opleiding',

@@ -68,6 +68,16 @@ export class AanbodDetailService {
     },
     {
       id: 7,
+      urlName: 'groepsbehandeling-adhd-en-angst',
+      name: 'Groepsbehandelingen (ADHD & Angst)',
+      intro: 'Samen werken aan inzicht, structuur en verandering binnen een veilige groep.',
+      description: 'De praktijk biedt groepsbehandelingen aan voor volwassenen met ADHD of angstklachten. Binnen een kleine groep werk je aan herkenning, structuur en praktische vaardigheden. De behandeling is gebaseerd op cognitieve gedragstherapie (CGT) en richt zich op het doorbreken van patronen die klachten in stand houden. De kracht van een groep is dat je samen leert, elkaar ondersteunt en herkenning ervaart in elkaars ervaringen.',
+      targetAudience: 'Deze groepsbehandelingen zijn bedoeld voor volwassenen met ADHD of met angstklachten (zoals paniek, sociale angst of gegeneraliseerde angst). De groepen zijn kleinschalig, waardoor er voldoende ruimte is voor persoonlijke aandacht en veiligheid.',
+      expectations: 'Tijdens de bijeenkomsten krijg je uitleg over hoe gedachten, gevoelens en gedrag elkaar beïnvloeden, en oefen je met nieuwe vaardigheden. Je wisselt ervaringen uit met de groep, doet praktische opdrachten en krijgt handvatten om thuis mee verder te werken. CGT-elementen zoals gedragsexperimenten, cognitieve herstructurering en vaardigheden rondom planning en structuur komen aan bod.',
+      duration: 'Een groepsbehandeling bestaat doorgaans uit 8 tot 12 sessies van 90 minuten.',
+    },
+    {
+      id: 8,
       urlName: 'supervisie-gz-opleiding',
       name: 'Supervisie GZ-opleiding',
       intro: 'Begeleiding en ondersteuning tijdens je opleiding tot GZ-psycholoog, gericht op persoonlijke groei en professionele ontwikkeling in je werk.',
@@ -77,7 +87,7 @@ export class AanbodDetailService {
       duration: 'Supervisie vindt meestal plaats in 10 tot 15 sessies van 60 minuten, afhankelijk van de behoeften en voortgang.'
     },
     {
-      id: 8,
+      id: 9,
       urlName: 'coaching',
       name: 'Coaching',
       intro: 'Persoonlijke begeleiding en ondersteuning, zonder diagnose of verwijzing.',
